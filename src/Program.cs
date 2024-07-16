@@ -1,4 +1,6 @@
 ﻿using System.CommandLine;
+using System.Runtime.CompilerServices;
+[assembly: InternalsVisibleTo("Microsoft.KiotaDomExportDiffTool.Tests")]
 
 namespace Microsoft.KiotaDomExportDiffTool;
 static class Program
