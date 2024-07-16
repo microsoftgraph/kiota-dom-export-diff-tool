@@ -11,14 +11,23 @@ public sealed class DomDiffExplanationServiceTests : IDisposable
         return await File.ReadAllTextAsync(path, cancellationToken).ConfigureAwait(false);
     }
     [Fact]
-    public async Task TestName()
+    public async Task RemovesHeaderAndFooter()
     {
         var testContent = await LoadTestFile(_cancellationTokenSource.Token);
         var logger = Mock.Of<ILogger>();
         var service = new DomDiffExplanationService(logger);
         var result = service.CleanupDiffHeaderAndFooter(testContent);
-        Assert.DoesNotContain("+++", result);
-        Assert.DoesNotContain(".windows.", result);
+        Assert.DoesNotContain("+++", result, StringComparison.OrdinalIgnoreCase);
+        Assert.DoesNotContain(".windows.", result, StringComparison.OrdinalIgnoreCase);
+    }
+    [Fact]
+    public async Task RemovesLocationLines()
+    {
+        var testContent = await LoadTestFile(_cancellationTokenSource.Token);
+        var logger = Mock.Of<ILogger>();
+        var service = new DomDiffExplanationService(logger);
+        var result = service.CleanupLocationLines(testContent);
+        Assert.DoesNotContain("@@", result, StringComparison.OrdinalIgnoreCase);
     }
 
     public void Dispose()

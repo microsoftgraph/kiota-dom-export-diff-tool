@@ -15,7 +15,7 @@ public class DomDiffExplanationService
     }
     internal void ExplainDiff(string diffValue)
     {
-        var diffBody = CleanupDiffHeaderAndFooter(diffValue);
+        var diffBody = CleanupLocationLines(CleanupDiffHeaderAndFooter(diffValue));
         throw new NotImplementedException();
     }
     private const string DiffHeaderCloseTag = "+++ ";
@@ -47,4 +47,8 @@ public class DomDiffExplanationService
         }
         return diffValue[headerCloserIndex..footerOpenerIndex];
     }
+    internal string CleanupLocationLines(string diffValue) =>
+        string.Join(LineReturnChar, diffValue.Split(LineReturnChar, StringSplitOptions.RemoveEmptyEntries)
+            .Where(static x => !x.StartsWith("@@", StringComparison.OrdinalIgnoreCase))
+            .Select(static x => x.Trim()));
 }
