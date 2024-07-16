@@ -12,13 +12,16 @@ public static partial class DiffToolHost
     }
     private static Command ExplainDiff()
     {
-        var diffOption = new Option<string>(["--diff"], "The diff to explain") {
+        var diffOption = new Option<string>(["--diff"], "The diff to explain")
+        {
             IsRequired = false
         };
-        var pathOption = new Option<string>(["--path"], "The path to the patch file to explain") {
+        var pathOption = new Option<string>(["--path"], "The path to the patch file to explain")
+        {
             IsRequired = false
         };
-        var failOnRemoval = new Option<bool>(["--fail-on-removal", "-f"], "Fails if a removal is detected") {
+        var failOnRemoval = new Option<bool>(["--fail-on-removal", "-f"], "Fails if a removal is detected")
+        {
             IsRequired = false,
         };
         var command = new Command("explain", "Parses the result of a git diff and returns an explanation of the changes")
@@ -28,7 +31,8 @@ public static partial class DiffToolHost
             failOnRemoval
         };
         var logLevelOption = GetLogLevelOption();
-        command.Handler = new ExplainDiffHandler {
+        command.Handler = new ExplainDiffHandler
+        {
             Diff = diffOption,
             Path = pathOption,
             FailOnRemoval = failOnRemoval,
