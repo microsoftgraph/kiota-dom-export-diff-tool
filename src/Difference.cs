@@ -6,4 +6,7 @@ public enum DifferenceKind
     Removal,
 }
 
-public record Difference(DifferenceKind Kind, IDomExportEntry Entry);
+public record Difference(DifferenceKind Kind, IDomExportEntry Entry)
+{
+    public override string ToString() => $"{Kind} of {Entry.ExplainToHuman()}";
+}

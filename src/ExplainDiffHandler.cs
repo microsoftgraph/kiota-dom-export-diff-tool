@@ -58,6 +58,10 @@ internal class ExplainDiffHandler : ICommandHandler
                 diffValue = await File.ReadAllTextAsync(pathValue, cancellationToken).ConfigureAwait(false);
             }
             var result = diffExplanationService.ExplainDiff(diffValue);
+            foreach(var diff in result)
+            {
+                Console.WriteLine(diff.ToString());
+            }
             if (Array.Exists(result, static x => x.Kind is DifferenceKind.Removal) && failOnRemovalValue)
             {
                 logger.LogCritical("A removal was detected and the process was configured to fail on removals");
