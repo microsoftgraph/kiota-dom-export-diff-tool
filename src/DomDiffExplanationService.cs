@@ -6,17 +6,33 @@ namespace Microsoft.KiotaDomExportDiffTool;
 public class DomDiffExplanationService
 {
     private readonly ILogger Logger;
-    private readonly bool FailOnRemoval;
-    public DomDiffExplanationService(ILogger logger, bool failOnRemoval = false)
+    public DomDiffExplanationService(ILogger logger)
     {
         ArgumentNullException.ThrowIfNull(logger);
         Logger = logger;
-        FailOnRemoval = failOnRemoval;
     }
-    internal void ExplainDiff(string diffValue)
+    internal Difference[] ExplainDiff(string diffValue)
     {
         var diffBody = CleanupLocationLines(CleanupDiffHeaderAndFooter(diffValue));
-        throw new NotImplementedException();
+        return SplitLines(diffBody).Select(ParseLine).OfType<Difference>().ToArray();
+    }
+    private static readonly Func<string, IDomExportEntry>[] parsers = [];
+    private Difference? ParseLine(string line)
+    {
+        var kind = line[0] switch
+        {
+            '+' => DifferenceKind.Addition,
+            '-' => DifferenceKind.Removal,
+            _ => throw new InvalidOperationException($"Unrecognized difference kind: {line}"),
+        };
+        foreach (var parser in parsers)
+        {
+            var result = parser(line);
+            if (result is not null)
+                return new Difference(kind, result);
+        }
+        Logger.LogWarning("Unrecognized line: {Line}", line);
+        return null;
     }
     private const string DiffHeaderCloseTag = "+++ ";
     private const string DiffFooterOpenTag = "--";
@@ -47,8 +63,10 @@ public class DomDiffExplanationService
         }
         return diffValue[headerCloserIndex..footerOpenerIndex];
     }
+    private static string[] SplitLines(string diffValue) =>
+        diffValue.Split(LineReturnChar, StringSplitOptions.RemoveEmptyEntries);
     internal string CleanupLocationLines(string diffValue) =>
-        string.Join(LineReturnChar, diffValue.Split(LineReturnChar, StringSplitOptions.RemoveEmptyEntries)
+        string.Join(LineReturnChar, SplitLines(diffValue)
             .Where(static x => !x.StartsWith("@@", StringComparison.OrdinalIgnoreCase))
             .Select(static x => x.Trim()));
 }

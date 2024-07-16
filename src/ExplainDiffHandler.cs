@@ -47,17 +47,21 @@ internal class ExplainDiffHandler : ICommandHandler
                 logger.LogCritical("You must provide either a diff or a path to a patch file, not both");
                 return 1;
             }
-            var diffExplanationService = new DomDiffExplanationService(logger, failOnRemovalValue);
+            var diffExplanationService = new DomDiffExplanationService(logger);
             if (!string.IsNullOrEmpty(diffValue))
             {
                 logger.LogDebug("Explaining diff");
-                diffExplanationService.ExplainDiff(diffValue);
             }
             else
             {
                 logger.LogDebug("Explaining patch file");
-                var patchFileContent = await File.ReadAllTextAsync(pathValue, cancellationToken).ConfigureAwait(false);
-                diffExplanationService.ExplainDiff(patchFileContent);
+                diffValue = await File.ReadAllTextAsync(pathValue, cancellationToken).ConfigureAwait(false);
+            }
+            var result = diffExplanationService.ExplainDiff(diffValue);
+            if (Array.Exists(result, static x => x.Kind is DifferenceKind.Removal) && failOnRemovalValue)
+            {
+                logger.LogCritical("A removal was detected and the process was configured to fail on removals");
+                return 1;
             }
             return 0;
         }
