@@ -1,4 +1,4 @@
-namespace kiota_dom_export_diff_tool;
+namespace Microsoft.KiotaDomExportDiffTool.Tests;
 
 public class UnitTest1
 {
