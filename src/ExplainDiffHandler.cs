@@ -59,8 +59,7 @@ internal class ExplainDiffHandler : ICommandHandler
                 var patchFileContent = await File.ReadAllTextAsync(pathValue, cancellationToken).ConfigureAwait(false);
                 diffExplanationService.ExplainDiff(patchFileContent);
             }
-            await Task.Delay(0, cancellationToken).ConfigureAwait(false);
-            throw new NotImplementedException();
+            return 0;
         }
     }
     protected (ILoggerFactory, ILogger<T>) GetLoggerAndFactory<T>(InvocationContext context, string logFileRootPath = "")

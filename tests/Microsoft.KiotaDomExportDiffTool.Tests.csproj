@@ -33,4 +33,10 @@
     <ProjectReference Include="..\src\kiota-dom-export-diff-tool.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="resources/0001-temp-second-export.patch">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
