@@ -2,6 +2,12 @@
 
 ## Generating a valid diff for evaluation
 
+### Debugging
+
+```PowerShell
+dotnet run --project .\src\kiota-dom-export-diff-tool.csproj -- explain --path (Resolve-Path .\tests\resources\0001-temp-second-export.patch) -f
+```
+
 ### Diff method
 
 ```PowerShell
