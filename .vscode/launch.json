@@ -8,7 +8,7 @@
 			"name": "C#: kiota-dom-export-diff-tool Debug",
 			"type": "dotnet",
 			"request": "launch",
-			"projectPath": "${workspaceFolder}/kiota-dom-export-diff-tool.csproj"
+			"projectPath": "${workspaceFolder}/src/kiota-dom-export-diff-tool.csproj"
 		}
 
 	]

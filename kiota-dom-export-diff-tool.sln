@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kiota-dom-export-diff-tool", "kiota-dom-export-diff-tool.csproj", "{578A78C9-54EB-4314-B7BE-6FFF4D7CA021}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kiota-dom-export-diff-tool", "src/kiota-dom-export-diff-tool.csproj", "{578A78C9-54EB-4314-B7BE-6FFF4D7CA021}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
