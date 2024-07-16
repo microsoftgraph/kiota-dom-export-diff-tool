@@ -14,9 +14,11 @@ public class DomDiffExplanationService
     internal Difference[] ExplainDiff(string diffValue)
     {
         var diffBody = CleanupLocationLines(CleanupDiffHeaderAndFooter(diffValue));
-        return SplitLines(diffBody).Select(ParseLine).OfType<Difference>().ToArray();
+        return SplitLines(diffBody).AsParallel().Select(ParseLine).OfType<Difference>().ToArray();
     }
-    private static readonly Func<string, IDomExportEntry>[] parsers = [];
+    private static readonly Func<string, IDomExportEntry?>[] parsers = [
+        PropertyDomEntry.Parse,
+    ];
     private Difference? ParseLine(string line)
     {
         var kind = line[0] switch
