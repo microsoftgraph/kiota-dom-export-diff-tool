@@ -81,3 +81,23 @@ public partial record MethodDomEntry(string ParentTypePath, bool isStatic, Acces
         return $"{AccessModifier} method {Name} in type {ParentTypePath} with return type {ReturnTypeName} and parameters {string.Join(", ", Parameters.Select(static x => x.ExplainToHuman()))}";
     }
 }
+
+public partial record InheritanceDomEntry(string CurrentTypePath, string ParentTypePath) : IDomExportEntry
+{
+    //Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder.ContentRequestBuilderDeleteRequestConfiguration-->RequestConfiguration
+    [GeneratedRegex(@"(?<currentType>[\w.]+)-->(?<parentType>[\w.]+)")]
+    private static partial Regex _regex();
+    public static InheritanceDomEntry? Parse(string content)
+    {
+        var match = _regex().Match(content);
+        if (match.Success)
+        {
+            return new InheritanceDomEntry(match.Groups["currentType"].Value, match.Groups["parentType"].Value);
+        }
+        return null;
+    }
+    public string ExplainToHuman()
+    {
+        return $"{CurrentTypePath} inherits from {ParentTypePath}";
+    }
+}

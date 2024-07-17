@@ -35,4 +35,13 @@ public sealed class DomExportEntryTests
         Assert.Equal("CancellationToken", result.Parameters[1].TypeName);
         Assert.True(result.Parameters[1].isOptional);
     }
+    [InlineData("Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder.ContentRequestBuilderDeleteRequestConfiguration-->RequestConfiguration", "RequestConfiguration")]
+    [Theory]
+    public void ParsesDomInheritance(string value, string expectedParentType)
+    {
+        var result = InheritanceDomEntry.Parse(value);
+        Assert.NotNull(result);
+        Assert.Equal("Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder.ContentRequestBuilderDeleteRequestConfiguration", result.CurrentTypePath);
+        Assert.Equal(expectedParentType, result.ParentTypePath);
+    }
 }

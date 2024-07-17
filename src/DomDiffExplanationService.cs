@@ -19,6 +19,7 @@ public class DomDiffExplanationService
     private static readonly Func<string, IDomExportEntry?>[] parsers = [
         PropertyDomEntry.Parse,
         MethodDomEntry.Parse,
+        InheritanceDomEntry.Parse,
     ];
     private Difference? ParseLine(string line)
     {
