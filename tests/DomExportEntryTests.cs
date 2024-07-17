@@ -44,4 +44,13 @@ public sealed class DomExportEntryTests
         Assert.Equal("Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder.ContentRequestBuilderDeleteRequestConfiguration", result.CurrentTypePath);
         Assert.Equal(expectedParentType, result.ParentTypePath);
     }
+    [InlineData("Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder.ContentRequestBuilderDeleteRequestConfiguration~~>RequestConfiguration", "RequestConfiguration")]
+    [Theory]
+    public void ParsesDomImplementation(string value, string expectedInterfaceType)
+    {
+        var result = ImplementationDomEntry.Parse(value);
+        Assert.NotNull(result);
+        Assert.Equal("Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder.ContentRequestBuilderDeleteRequestConfiguration", result.CurrentTypePath);
+        Assert.Contains(expectedInterfaceType, result.InterfaceTypePaths, StringComparer.OrdinalIgnoreCase);
+    }
 }

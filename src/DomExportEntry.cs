@@ -101,3 +101,23 @@ public partial record InheritanceDomEntry(string CurrentTypePath, string ParentT
         return $"{CurrentTypePath} inherits from {ParentTypePath}";
     }
 }
+
+public partial record ImplementationDomEntry(string CurrentTypePath, string[] InterfaceTypePaths) : IDomExportEntry
+{
+    //Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder.ContentRequestBuilderDeleteRequestConfiguration~~>RequestConfiguration
+    [GeneratedRegex(@"(?<currentType>[\w.]+)~~>(?<interfaceTypes>[\w.,]+)")]
+    private static partial Regex _regex();
+    public static ImplementationDomEntry? Parse(string content)
+    {
+        var match = _regex().Match(content);
+        if (match.Success)
+        {
+            return new ImplementationDomEntry(match.Groups["currentType"].Value, match.Groups["interfaceTypes"].Value.Split(',', StringSplitOptions.RemoveEmptyEntries));
+        }
+        return null;
+    }
+    public string ExplainToHuman()
+    {
+        return $"{CurrentTypePath} implements {string.Join(", ", InterfaceTypePaths.Order(StringComparer.OrdinalIgnoreCase))}";
+    }
+}

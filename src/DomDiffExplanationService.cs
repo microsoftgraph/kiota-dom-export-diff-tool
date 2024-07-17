@@ -20,6 +20,7 @@ public class DomDiffExplanationService
         PropertyDomEntry.Parse,
         MethodDomEntry.Parse,
         InheritanceDomEntry.Parse,
+        ImplementationDomEntry.Parse,
     ];
     private Difference? ParseLine(string line)
     {
