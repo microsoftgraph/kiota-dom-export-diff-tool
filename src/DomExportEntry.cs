@@ -16,7 +16,7 @@ public enum AccessModifier
 public partial record PropertyDomEntry(string ParentTypePath, bool isStatic, AccessModifier AccessModifier, string Name, string TypeName) : IDomExportEntry
 {
     //Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters::|public|Search:string
-    [GeneratedRegex(@"(?<parentTypePathName>[\w.]+)::(?:\|(?<static>static))?\|(?<access>(public|protected))\|(?<name>[\w]+):(?<typeName>[\w]+)")]
+    [GeneratedRegex(@"(?<parentTypePathName>[\w.]+)::(?:\|(?<static>static))?\|(?<access>(public|protected))\|(?<name>[\w]+):(?<typeName>[\w\[\]]+)")]
     private static partial Regex _regex();
     public static PropertyDomEntry? Parse(string content)
     {
@@ -37,7 +37,7 @@ public partial record PropertyDomEntry(string ParentTypePath, bool isStatic, Acc
 public partial record ParameterDomEntry(string Name, string TypeName, bool isOptional) : IDomExportEntry
 {
     //requestConfiguration?:RequestConfiguration
-    [GeneratedRegex(@"(?<name>[\w]+)(?<isOptional>\?)?:(?<typeName>[\w]+)")]
+    [GeneratedRegex(@"(?<name>[\w]+)(?<isOptional>\?)?:(?<typeName>[\w\[\]]+)")]
     private static partial Regex _regex();
     public static ParameterDomEntry? Parse(string content)
     {
@@ -56,7 +56,7 @@ public partial record ParameterDomEntry(string Name, string TypeName, bool isOpt
 public partial record MethodDomEntry(string ParentTypePath, bool isStatic, AccessModifier AccessModifier, string Name, string ReturnTypeName, ParameterDomEntry[] Parameters) : IDomExportEntry
 {
     //Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder::|public|DeleteAsync(requestConfiguration?:RequestConfiguration, cancellationToken?:CancellationToken):Stream
-    [GeneratedRegex(@"(?<parentTypePathName>[\w.]+)::(?:\|(?<static>static))?\|(?<access>(public|protected))\|(?<name>[\w]+)\((?<parameters>.*)?\):(?<returnTypeName>[\w]+)")]
+    [GeneratedRegex(@"(?<parentTypePathName>[\w.]+)::(?:\|(?<static>static))?\|(?<access>(public|protected))\|(?<name>[\w]+)\((?<parameters>.*)?\):(?<returnTypeName>[\w\[\]]+)")]
     private static partial Regex _regex();
     public static MethodDomEntry? Parse(string content)
     {
