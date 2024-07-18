@@ -121,3 +121,23 @@ public partial record ImplementationDomEntry(string CurrentTypePath, string[] In
         return $"{CurrentTypePath} implements {string.Join(", ", InterfaceTypePaths.Order(StringComparer.OrdinalIgnoreCase))}";
     }
 }
+
+public partial record IndexerDomEntry(string ParentTypePath, string ParameterName, string ParameterTypePath, string ReturnTypePath) : IDomExportEntry
+{
+    //Graphdotnetv4.Users.usersRequestBuilder::[UserId:string]:Graphdotnetv4.Users.Item.UserItemRequestBuilder
+    [GeneratedRegex(@"(?<parentTypePath>[\w.]+)::\[(?<parameterName>[\w]+):(?<parameterTypePath>[\w.]+)\]:(?<returnTypePath>[\w.]+)")]
+    private static partial Regex _regex();
+    public static IndexerDomEntry? Parse(string content)
+    {
+        var match = _regex().Match(content);
+        if (match.Success)
+        {
+            return new IndexerDomEntry(match.Groups["parentTypePath"].Value, match.Groups["parameterName"].Value, match.Groups["parameterTypePath"].Value, match.Groups["returnTypePath"].Value);
+        }
+        return null;
+    }
+    public string ExplainToHuman()
+    {
+        return $"{ParentTypePath} has an indexer with parameter {ParameterName} of type {ParameterTypePath} and return type {ReturnTypePath}";
+    }
+}
