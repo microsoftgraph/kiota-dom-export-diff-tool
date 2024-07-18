@@ -64,4 +64,14 @@ public sealed class DomExportEntryTests
         Assert.Equal(expectedParameterType, result.ParameterTypePath);
         Assert.Equal(expectedReturnType, result.ReturnTypePath);
     }
+    [InlineData("Graphdotnetv4.Models.bodyType::0000-text", "Graphdotnetv4.Models.bodyType", "text", 0)]
+    [Theory]
+    public void ParsesDomEnumMember(string value, string expectedPath, string expectedMemberName, int expectedMemberIndex)
+    {
+        var result = EnumMemberDomEntry.Parse(value);
+        Assert.NotNull(result);
+        Assert.Equal(expectedPath, result.ParentTypePath);
+        Assert.Equal(expectedMemberName, result.MemberName);
+        Assert.Equal(expectedMemberIndex, result.MemberIndex);
+    }
 }

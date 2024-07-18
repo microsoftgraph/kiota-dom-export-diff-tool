@@ -141,3 +141,23 @@ public partial record IndexerDomEntry(string ParentTypePath, string ParameterNam
         return $"{ParentTypePath} has an indexer with parameter {ParameterName} of type {ParameterTypePath} and return type {ReturnTypePath}";
     }
 }
+
+public partial record EnumMemberDomEntry(string ParentTypePath, string MemberName, int MemberIndex) : IDomExportEntry
+{
+    //Graphdotnetv4.Models.bodyType::0000-text
+    [GeneratedRegex(@"(?<parentTypePath>[\w.]+)::(?<memberOrder>\d{4})-(?<memberName>[\w]+)")]
+    private static partial Regex _regex();
+    public static EnumMemberDomEntry? Parse(string content)
+    {
+        var match = _regex().Match(content);
+        if (match.Success && int.TryParse(match.Groups["memberOrder"].Value, out var memberIndex))
+        {
+            return new EnumMemberDomEntry(match.Groups["parentTypePath"].Value, match.Groups["memberName"].Value, memberIndex);
+        }
+        return null;
+    }
+    public string ExplainToHuman()
+    {
+        return $"{ParentTypePath} has an enum member {MemberName} with order {MemberIndex}";
+    }
+}

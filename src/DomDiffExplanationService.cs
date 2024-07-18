@@ -22,6 +22,7 @@ public class DomDiffExplanationService
         InheritanceDomEntry.Parse,
         ImplementationDomEntry.Parse,
         IndexerDomEntry.Parse,
+        EnumMemberDomEntry.Parse,
     ];
     private Difference? ParseLine(string line)
     {
