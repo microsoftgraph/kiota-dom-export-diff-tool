@@ -15,25 +15,26 @@ public sealed class DomExportEntryTests
         Assert.Equal("Search", result.Name);
         Assert.Equal(expectedType, result.TypeName);
     }
-    [InlineData("Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder::|public|DeleteAsync(requestConfiguration?:RequestConfiguration, cancellationToken?:CancellationToken):Stream", "Stream")]
-    [InlineData("Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder::|public|DeleteAsync(requestConfiguration?:RequestConfiguration, cancellationToken?:CancellationToken):[string]", "[string]")]
+    [InlineData("Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder::|public|DeleteAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Stream", "Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder", "DeleteAsync", "requestConfiguration", "RequestConfiguration", "cancellationToken", "CancellationToken", "Stream", true)]
+    [InlineData("Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder::|public|DeleteAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):[string]", "Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder", "DeleteAsync","requestConfiguration", "RequestConfiguration", "cancellationToken", "CancellationToken", "[string]", true)]
+    [InlineData("Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Count.CountRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void", "Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Count.CountRequestBuilder", "constructor", "pathParameters", "Dictionary<string, object>", "requestAdapter", "IRequestAdapter", "void", false)]
     [Theory]
-    public void ParsesDomMethod(string value, string expectedReturnType)
+    public void ParsesDomMethod(string value, string expectedParentPath, string expectedMethodName, string firstParameterName, string firstParameterType, string secondParameterName, string secondParameterType, string expectedReturnType, bool areParametersOptional)
     {
         var result = MethodDomEntry.Parse(value);
         Assert.NotNull(result);
-        Assert.Equal("Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder", result.ParentTypePath);
+        Assert.Equal(expectedParentPath, result.ParentTypePath);
         Assert.False(result.isStatic);
         Assert.Equal(AccessModifier.Public, result.AccessModifier);
-        Assert.Equal("DeleteAsync", result.Name);
+        Assert.Equal(expectedMethodName, result.Name);
         Assert.Equal(expectedReturnType, result.ReturnTypeName);
         Assert.Equal(2, result.Parameters.Length);
-        Assert.Equal("requestConfiguration", result.Parameters[0].Name);
-        Assert.Equal("RequestConfiguration", result.Parameters[0].TypeName);
-        Assert.True(result.Parameters[0].isOptional);
-        Assert.Equal("cancellationToken", result.Parameters[1].Name);
-        Assert.Equal("CancellationToken", result.Parameters[1].TypeName);
-        Assert.True(result.Parameters[1].isOptional);
+        Assert.Equal(firstParameterName, result.Parameters[0].Name);
+        Assert.Equal(firstParameterType, result.Parameters[0].TypeName);
+        Assert.Equal(areParametersOptional, result.Parameters[0].isOptional);
+        Assert.Equal(secondParameterName, result.Parameters[1].Name);
+        Assert.Equal(secondParameterType, result.Parameters[1].TypeName);
+        Assert.Equal(areParametersOptional, result.Parameters[1].isOptional);
     }
     [InlineData("Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder.ContentRequestBuilderDeleteRequestConfiguration-->RequestConfiguration", "RequestConfiguration")]
     [Theory]
@@ -44,14 +45,15 @@ public sealed class DomExportEntryTests
         Assert.Equal("Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder.ContentRequestBuilderDeleteRequestConfiguration", result.CurrentTypePath);
         Assert.Equal(expectedParentType, result.ParentTypePath);
     }
-    [InlineData("Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder.ContentRequestBuilderDeleteRequestConfiguration~~>RequestConfiguration", "RequestConfiguration")]
+    [InlineData("Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder.ContentRequestBuilderDeleteRequestConfiguration~~>IBackedModel; IParsable", "IBackedModel", "IParsable")]
     [Theory]
-    public void ParsesDomImplementation(string value, string expectedInterfaceType)
+    public void ParsesDomImplementation(string value, string expectedInterfaceType, string secondExpectedInterfaceType)
     {
         var result = ImplementationDomEntry.Parse(value);
         Assert.NotNull(result);
         Assert.Equal("Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder.ContentRequestBuilderDeleteRequestConfiguration", result.CurrentTypePath);
         Assert.Contains(expectedInterfaceType, result.InterfaceTypePaths, StringComparer.OrdinalIgnoreCase);
+        Assert.Contains(secondExpectedInterfaceType, result.InterfaceTypePaths, StringComparer.OrdinalIgnoreCase);
     }
     [InlineData("Graphdotnetv4.Users.usersRequestBuilder::[UserId:string]:Graphdotnetv4.Users.Item.UserItemRequestBuilder", "UserId", "string", "Graphdotnetv4.Users.Item.UserItemRequestBuilder")]
     [Theory]

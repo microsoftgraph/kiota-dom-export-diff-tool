@@ -16,7 +16,7 @@ public enum AccessModifier
 public partial record PropertyDomEntry(string ParentTypePath, bool isStatic, AccessModifier AccessModifier, string Name, string TypeName) : IDomExportEntry
 {
     //Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters::|public|Search:string
-    [GeneratedRegex(@"(?<parentTypePathName>[\w.]+)::(?:\|(?<static>static))?\|(?<access>(public|protected))\|(?<name>[\w]+):(?<typeName>[\w\[\]]+)")]
+    [GeneratedRegex(@"(?<parentTypePathName>[\w.]+)::(?:\|(?<static>static))?\|(?<access>(public|protected))\|(?<name>[\w]+):(?<typeName>[\w\[\]\s<>,]+)")]
     private static partial Regex _regex();
     public static PropertyDomEntry? Parse(string content)
     {
@@ -37,7 +37,7 @@ public partial record PropertyDomEntry(string ParentTypePath, bool isStatic, Acc
 public partial record ParameterDomEntry(string Name, string TypeName, bool isOptional) : IDomExportEntry
 {
     //requestConfiguration?:RequestConfiguration
-    [GeneratedRegex(@"(?<name>[\w]+)(?<isOptional>\?)?:(?<typeName>[\w\[\]]+)")]
+    [GeneratedRegex(@"(?<name>[\w]+)(?<isOptional>\?)?:(?<typeName>[\w\[\]\s<>,]+)")]
     private static partial Regex _regex();
     public static ParameterDomEntry? Parse(string content)
     {
@@ -55,8 +55,8 @@ public partial record ParameterDomEntry(string Name, string TypeName, bool isOpt
 }
 public partial record MethodDomEntry(string ParentTypePath, bool isStatic, AccessModifier AccessModifier, string Name, string ReturnTypeName, ParameterDomEntry[] Parameters) : IDomExportEntry
 {
-    //Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder::|public|DeleteAsync(requestConfiguration?:RequestConfiguration, cancellationToken?:CancellationToken):Stream
-    [GeneratedRegex(@"(?<parentTypePathName>[\w.]+)::(?:\|(?<static>static))?\|(?<access>(public|protected))\|(?<name>[\w]+)\((?<parameters>.*)?\):(?<returnTypeName>[\w\[\]]+)")]
+    //Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder::|public|DeleteAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Stream
+    [GeneratedRegex(@"(?<parentTypePathName>[\w.]+)::(?:\|(?<static>static))?\|(?<access>(public|protected))\|(?<name>[\w]+)\((?<parameters>.*)?\):(?<returnTypeName>[\w\[\]\s<>,]+)")]
     private static partial Regex _regex();
     public static MethodDomEntry? Parse(string content)
     {
@@ -69,7 +69,7 @@ public partial record MethodDomEntry(string ParentTypePath, bool isStatic, Acces
                                         match.Groups["name"].Value,
                                         match.Groups["returnTypeName"].Value,
                                         match.Groups["parameters"].Value
-                                                            .Split(',', StringSplitOptions.RemoveEmptyEntries)
+                                                            .Split(';', StringSplitOptions.RemoveEmptyEntries)
                                                             .Select(static x => ParameterDomEntry.Parse(x.Trim()))
                                                             .OfType<ParameterDomEntry>()
                                                             .ToArray());
@@ -78,7 +78,7 @@ public partial record MethodDomEntry(string ParentTypePath, bool isStatic, Acces
     }
     public string ExplainToHuman()
     {
-        return $"{AccessModifier} method {Name} in type {ParentTypePath} with return type {ReturnTypeName} and parameters {string.Join(", ", Parameters.Select(static x => x.ExplainToHuman()))}";
+        return $"{AccessModifier} method {Name} in type {ParentTypePath} with return type {ReturnTypeName} and parameters {string.Join("; ", Parameters.Select(static x => x.ExplainToHuman()))}";
     }
 }
 
@@ -105,20 +105,20 @@ public partial record InheritanceDomEntry(string CurrentTypePath, string ParentT
 public partial record ImplementationDomEntry(string CurrentTypePath, string[] InterfaceTypePaths) : IDomExportEntry
 {
     //Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder.ContentRequestBuilderDeleteRequestConfiguration~~>RequestConfiguration
-    [GeneratedRegex(@"(?<currentType>[\w.]+)~~>(?<interfaceTypes>[\w.,]+)")]
+    [GeneratedRegex(@"(?<currentType>[\w.]+)~~>(?<interfaceTypes>[\w.;\s]+)")]
     private static partial Regex _regex();
     public static ImplementationDomEntry? Parse(string content)
     {
         var match = _regex().Match(content);
         if (match.Success)
         {
-            return new ImplementationDomEntry(match.Groups["currentType"].Value, match.Groups["interfaceTypes"].Value.Split(',', StringSplitOptions.RemoveEmptyEntries));
+            return new ImplementationDomEntry(match.Groups["currentType"].Value, match.Groups["interfaceTypes"].Value.Split(';', StringSplitOptions.RemoveEmptyEntries).Select(static x => x.Trim()).ToArray());
         }
         return null;
     }
     public string ExplainToHuman()
     {
-        return $"{CurrentTypePath} implements {string.Join(", ", InterfaceTypePaths.Order(StringComparer.OrdinalIgnoreCase))}";
+        return $"{CurrentTypePath} implements {string.Join("; ", InterfaceTypePaths.Order(StringComparer.OrdinalIgnoreCase))}";
     }
 }
 

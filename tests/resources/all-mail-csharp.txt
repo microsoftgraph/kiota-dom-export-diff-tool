@@ -1,0 +1,978 @@
++Graphdotnetv4.ApiClient-->BaseRequestBuilder
++Graphdotnetv4.ApiClient::|public|constructor(requestAdapter:IRequestAdapter):void
++Graphdotnetv4.ApiClient::|public|users:Graphdotnetv4.Users.usersRequestBuilder
++Graphdotnetv4.Models.attachment-->Graphdotnetv4.Models.entity
++Graphdotnetv4.Models.attachment::|public|ContentType:string
++Graphdotnetv4.Models.attachment::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.attachment::|public|IsInline:boolean
++Graphdotnetv4.Models.attachment::|public|LastModifiedDateTime:DateTimeOffset
++Graphdotnetv4.Models.attachment::|public|Name:string
++Graphdotnetv4.Models.attachment::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.attachment::|public|Size:integer
++Graphdotnetv4.Models.attachment::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.attachment
++Graphdotnetv4.Models.attachmentCollectionResponse::|public|AdditionalData:IDictionary<string, object>
++Graphdotnetv4.Models.attachmentCollectionResponse::|public|constructor():void
++Graphdotnetv4.Models.attachmentCollectionResponse::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.attachmentCollectionResponse::|public|OdataNextLink:string
++Graphdotnetv4.Models.attachmentCollectionResponse::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.attachmentCollectionResponse::|public|Value:[Graphdotnetv4.Models.attachment]
++Graphdotnetv4.Models.attachmentCollectionResponse::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.attachmentCollectionResponse
++Graphdotnetv4.Models.attachmentCollectionResponse~~>IAdditionalDataHolder; IParsable
++Graphdotnetv4.Models.bodyType::0000-text
++Graphdotnetv4.Models.bodyType::0001-html
++Graphdotnetv4.Models.dateTimeTimeZone::|public|AdditionalData:IDictionary<string, object>
++Graphdotnetv4.Models.dateTimeTimeZone::|public|constructor():void
++Graphdotnetv4.Models.dateTimeTimeZone::|public|DateTime:string
++Graphdotnetv4.Models.dateTimeTimeZone::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.dateTimeTimeZone::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.dateTimeTimeZone::|public|TimeZone:string
++Graphdotnetv4.Models.dateTimeTimeZone::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.dateTimeTimeZone
++Graphdotnetv4.Models.dateTimeTimeZone~~>IAdditionalDataHolder; IParsable
++Graphdotnetv4.Models.emailAddress::|public|AdditionalData:IDictionary<string, object>
++Graphdotnetv4.Models.emailAddress::|public|Address:string
++Graphdotnetv4.Models.emailAddress::|public|constructor():void
++Graphdotnetv4.Models.emailAddress::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.emailAddress::|public|Name:string
++Graphdotnetv4.Models.emailAddress::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.emailAddress::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.emailAddress
++Graphdotnetv4.Models.emailAddress~~>IAdditionalDataHolder; IParsable
++Graphdotnetv4.Models.entity::|public|AdditionalData:IDictionary<string, object>
++Graphdotnetv4.Models.entity::|public|constructor():void
++Graphdotnetv4.Models.entity::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.entity::|public|Id:string
++Graphdotnetv4.Models.entity::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.entity::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.entity
++Graphdotnetv4.Models.entity~~>IAdditionalDataHolder; IParsable
++Graphdotnetv4.Models.extension-->Graphdotnetv4.Models.entity
++Graphdotnetv4.Models.extension::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.extension::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.extension::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.extension
++Graphdotnetv4.Models.extensionCollectionResponse::|public|AdditionalData:IDictionary<string, object>
++Graphdotnetv4.Models.extensionCollectionResponse::|public|constructor():void
++Graphdotnetv4.Models.extensionCollectionResponse::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.extensionCollectionResponse::|public|OdataNextLink:string
++Graphdotnetv4.Models.extensionCollectionResponse::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.extensionCollectionResponse::|public|Value:[Graphdotnetv4.Models.extension]
++Graphdotnetv4.Models.extensionCollectionResponse::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.extensionCollectionResponse
++Graphdotnetv4.Models.extensionCollectionResponse~~>IAdditionalDataHolder; IParsable
++Graphdotnetv4.Models.followupFlag::|public|AdditionalData:IDictionary<string, object>
++Graphdotnetv4.Models.followupFlag::|public|CompletedDateTime:Graphdotnetv4.Models.dateTimeTimeZone
++Graphdotnetv4.Models.followupFlag::|public|constructor():void
++Graphdotnetv4.Models.followupFlag::|public|DueDateTime:Graphdotnetv4.Models.dateTimeTimeZone
++Graphdotnetv4.Models.followupFlag::|public|FlagStatus:Graphdotnetv4.Models.followupFlagStatus
++Graphdotnetv4.Models.followupFlag::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.followupFlag::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.followupFlag::|public|StartDateTime:Graphdotnetv4.Models.dateTimeTimeZone
++Graphdotnetv4.Models.followupFlag::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.followupFlag
++Graphdotnetv4.Models.followupFlagStatus::0000-notFlagged
++Graphdotnetv4.Models.followupFlagStatus::0001-complete
++Graphdotnetv4.Models.followupFlagStatus::0002-flagged
++Graphdotnetv4.Models.followupFlag~~>IAdditionalDataHolder; IParsable
++Graphdotnetv4.Models.importance::0000-low
++Graphdotnetv4.Models.importance::0001-normal
++Graphdotnetv4.Models.importance::0002-high
++Graphdotnetv4.Models.inferenceClassification-->Graphdotnetv4.Models.entity
++Graphdotnetv4.Models.inferenceClassification::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.inferenceClassification::|public|Overrides:[Graphdotnetv4.Models.inferenceClassificationOverride]
++Graphdotnetv4.Models.inferenceClassification::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.inferenceClassification::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.inferenceClassification
++Graphdotnetv4.Models.inferenceClassificationOverride-->Graphdotnetv4.Models.entity
++Graphdotnetv4.Models.inferenceClassificationOverride::|public|ClassifyAs:Graphdotnetv4.Models.inferenceClassificationType
++Graphdotnetv4.Models.inferenceClassificationOverride::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.inferenceClassificationOverride::|public|SenderEmailAddress:Graphdotnetv4.Models.emailAddress
++Graphdotnetv4.Models.inferenceClassificationOverride::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.inferenceClassificationOverride::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.inferenceClassificationOverride
++Graphdotnetv4.Models.inferenceClassificationOverrideCollectionResponse::|public|AdditionalData:IDictionary<string, object>
++Graphdotnetv4.Models.inferenceClassificationOverrideCollectionResponse::|public|constructor():void
++Graphdotnetv4.Models.inferenceClassificationOverrideCollectionResponse::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.inferenceClassificationOverrideCollectionResponse::|public|OdataNextLink:string
++Graphdotnetv4.Models.inferenceClassificationOverrideCollectionResponse::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.inferenceClassificationOverrideCollectionResponse::|public|Value:[Graphdotnetv4.Models.inferenceClassificationOverride]
++Graphdotnetv4.Models.inferenceClassificationOverrideCollectionResponse::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.inferenceClassificationOverrideCollectionResponse
++Graphdotnetv4.Models.inferenceClassificationOverrideCollectionResponse~~>IAdditionalDataHolder; IParsable
++Graphdotnetv4.Models.inferenceClassificationType::0000-focused
++Graphdotnetv4.Models.inferenceClassificationType::0001-other
++Graphdotnetv4.Models.internetMessageHeader::|public|AdditionalData:IDictionary<string, object>
++Graphdotnetv4.Models.internetMessageHeader::|public|constructor():void
++Graphdotnetv4.Models.internetMessageHeader::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.internetMessageHeader::|public|Name:string
++Graphdotnetv4.Models.internetMessageHeader::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.internetMessageHeader::|public|Value:string
++Graphdotnetv4.Models.internetMessageHeader::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.internetMessageHeader
++Graphdotnetv4.Models.internetMessageHeader~~>IAdditionalDataHolder; IParsable
++Graphdotnetv4.Models.itemBody::|public|AdditionalData:IDictionary<string, object>
++Graphdotnetv4.Models.itemBody::|public|constructor():void
++Graphdotnetv4.Models.itemBody::|public|Content:string
++Graphdotnetv4.Models.itemBody::|public|ContentType:Graphdotnetv4.Models.bodyType
++Graphdotnetv4.Models.itemBody::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.itemBody::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.itemBody::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.itemBody
++Graphdotnetv4.Models.itemBody~~>IAdditionalDataHolder; IParsable
++Graphdotnetv4.Models.mailFolder-->Graphdotnetv4.Models.entity
++Graphdotnetv4.Models.mailFolder::|public|ChildFolderCount:integer
++Graphdotnetv4.Models.mailFolder::|public|ChildFolders:[Graphdotnetv4.Models.mailFolder]
++Graphdotnetv4.Models.mailFolder::|public|DisplayName:string
++Graphdotnetv4.Models.mailFolder::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.mailFolder::|public|IsHidden:boolean
++Graphdotnetv4.Models.mailFolder::|public|MessageRules:[Graphdotnetv4.Models.messageRule]
++Graphdotnetv4.Models.mailFolder::|public|Messages:[Graphdotnetv4.Models.message]
++Graphdotnetv4.Models.mailFolder::|public|MultiValueExtendedProperties:[Graphdotnetv4.Models.multiValueLegacyExtendedProperty]
++Graphdotnetv4.Models.mailFolder::|public|ParentFolderId:string
++Graphdotnetv4.Models.mailFolder::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.mailFolder::|public|SingleValueExtendedProperties:[Graphdotnetv4.Models.singleValueLegacyExtendedProperty]
++Graphdotnetv4.Models.mailFolder::|public|TotalItemCount:integer
++Graphdotnetv4.Models.mailFolder::|public|UnreadItemCount:integer
++Graphdotnetv4.Models.mailFolder::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.mailFolder
++Graphdotnetv4.Models.mailFolderCollectionResponse::|public|AdditionalData:IDictionary<string, object>
++Graphdotnetv4.Models.mailFolderCollectionResponse::|public|constructor():void
++Graphdotnetv4.Models.mailFolderCollectionResponse::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.mailFolderCollectionResponse::|public|OdataNextLink:string
++Graphdotnetv4.Models.mailFolderCollectionResponse::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.mailFolderCollectionResponse::|public|Value:[Graphdotnetv4.Models.mailFolder]
++Graphdotnetv4.Models.mailFolderCollectionResponse::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.mailFolderCollectionResponse
++Graphdotnetv4.Models.mailFolderCollectionResponse~~>IAdditionalDataHolder; IParsable
++Graphdotnetv4.Models.message-->Graphdotnetv4.Models.outlookItem
++Graphdotnetv4.Models.message::|public|Attachments:[Graphdotnetv4.Models.attachment]
++Graphdotnetv4.Models.message::|public|BccRecipients:[Graphdotnetv4.Models.recipient]
++Graphdotnetv4.Models.message::|public|Body:Graphdotnetv4.Models.itemBody
++Graphdotnetv4.Models.message::|public|BodyPreview:string
++Graphdotnetv4.Models.message::|public|CcRecipients:[Graphdotnetv4.Models.recipient]
++Graphdotnetv4.Models.message::|public|ConversationId:string
++Graphdotnetv4.Models.message::|public|ConversationIndex:base64url
++Graphdotnetv4.Models.message::|public|Extensions:[Graphdotnetv4.Models.extension]
++Graphdotnetv4.Models.message::|public|Flag:Graphdotnetv4.Models.followupFlag
++Graphdotnetv4.Models.message::|public|From:Graphdotnetv4.Models.recipient
++Graphdotnetv4.Models.message::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.message::|public|HasAttachments:boolean
++Graphdotnetv4.Models.message::|public|Importance:Graphdotnetv4.Models.importance
++Graphdotnetv4.Models.message::|public|InferenceClassification:Graphdotnetv4.Models.inferenceClassificationType
++Graphdotnetv4.Models.message::|public|InternetMessageHeaders:[Graphdotnetv4.Models.internetMessageHeader]
++Graphdotnetv4.Models.message::|public|InternetMessageId:string
++Graphdotnetv4.Models.message::|public|IsDeliveryReceiptRequested:boolean
++Graphdotnetv4.Models.message::|public|IsDraft:boolean
++Graphdotnetv4.Models.message::|public|IsRead:boolean
++Graphdotnetv4.Models.message::|public|IsReadReceiptRequested:boolean
++Graphdotnetv4.Models.message::|public|MultiValueExtendedProperties:[Graphdotnetv4.Models.multiValueLegacyExtendedProperty]
++Graphdotnetv4.Models.message::|public|ParentFolderId:string
++Graphdotnetv4.Models.message::|public|ReceivedDateTime:DateTimeOffset
++Graphdotnetv4.Models.message::|public|ReplyTo:[Graphdotnetv4.Models.recipient]
++Graphdotnetv4.Models.message::|public|Sender:Graphdotnetv4.Models.recipient
++Graphdotnetv4.Models.message::|public|SentDateTime:DateTimeOffset
++Graphdotnetv4.Models.message::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.message::|public|SingleValueExtendedProperties:[Graphdotnetv4.Models.singleValueLegacyExtendedProperty]
++Graphdotnetv4.Models.message::|public|Subject:string
++Graphdotnetv4.Models.message::|public|ToRecipients:[Graphdotnetv4.Models.recipient]
++Graphdotnetv4.Models.message::|public|UniqueBody:Graphdotnetv4.Models.itemBody
++Graphdotnetv4.Models.message::|public|WebLink:string
++Graphdotnetv4.Models.message::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.message
++Graphdotnetv4.Models.messageActionFlag::0000-any
++Graphdotnetv4.Models.messageActionFlag::0001-call
++Graphdotnetv4.Models.messageActionFlag::0002-doNotForward
++Graphdotnetv4.Models.messageActionFlag::0003-followUp
++Graphdotnetv4.Models.messageActionFlag::0004-fyi
++Graphdotnetv4.Models.messageActionFlag::0005-forward
++Graphdotnetv4.Models.messageActionFlag::0006-noResponseNecessary
++Graphdotnetv4.Models.messageActionFlag::0007-read
++Graphdotnetv4.Models.messageActionFlag::0008-reply
++Graphdotnetv4.Models.messageActionFlag::0009-replyToAll
++Graphdotnetv4.Models.messageActionFlag::0010-review
++Graphdotnetv4.Models.messageCollectionResponse::|public|AdditionalData:IDictionary<string, object>
++Graphdotnetv4.Models.messageCollectionResponse::|public|constructor():void
++Graphdotnetv4.Models.messageCollectionResponse::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.messageCollectionResponse::|public|OdataNextLink:string
++Graphdotnetv4.Models.messageCollectionResponse::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.messageCollectionResponse::|public|Value:[Graphdotnetv4.Models.message]
++Graphdotnetv4.Models.messageCollectionResponse::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.messageCollectionResponse
++Graphdotnetv4.Models.messageCollectionResponse~~>IAdditionalDataHolder; IParsable
++Graphdotnetv4.Models.messageRule-->Graphdotnetv4.Models.entity
++Graphdotnetv4.Models.messageRule::|public|Actions:Graphdotnetv4.Models.messageRuleActions
++Graphdotnetv4.Models.messageRule::|public|Conditions:Graphdotnetv4.Models.messageRulePredicates
++Graphdotnetv4.Models.messageRule::|public|DisplayName:string
++Graphdotnetv4.Models.messageRule::|public|Exceptions:Graphdotnetv4.Models.messageRulePredicates
++Graphdotnetv4.Models.messageRule::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.messageRule::|public|HasError:boolean
++Graphdotnetv4.Models.messageRule::|public|IsEnabled:boolean
++Graphdotnetv4.Models.messageRule::|public|IsReadOnly:boolean
++Graphdotnetv4.Models.messageRule::|public|Sequence:integer
++Graphdotnetv4.Models.messageRule::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.messageRule::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.messageRule
++Graphdotnetv4.Models.messageRuleActions::|public|AdditionalData:IDictionary<string, object>
++Graphdotnetv4.Models.messageRuleActions::|public|AssignCategories:[string]
++Graphdotnetv4.Models.messageRuleActions::|public|constructor():void
++Graphdotnetv4.Models.messageRuleActions::|public|CopyToFolder:string
++Graphdotnetv4.Models.messageRuleActions::|public|Delete:boolean
++Graphdotnetv4.Models.messageRuleActions::|public|ForwardAsAttachmentTo:[Graphdotnetv4.Models.recipient]
++Graphdotnetv4.Models.messageRuleActions::|public|ForwardTo:[Graphdotnetv4.Models.recipient]
++Graphdotnetv4.Models.messageRuleActions::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.messageRuleActions::|public|MarkAsRead:boolean
++Graphdotnetv4.Models.messageRuleActions::|public|MarkImportance:Graphdotnetv4.Models.importance
++Graphdotnetv4.Models.messageRuleActions::|public|MoveToFolder:string
++Graphdotnetv4.Models.messageRuleActions::|public|PermanentDelete:boolean
++Graphdotnetv4.Models.messageRuleActions::|public|RedirectTo:[Graphdotnetv4.Models.recipient]
++Graphdotnetv4.Models.messageRuleActions::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.messageRuleActions::|public|StopProcessingRules:boolean
++Graphdotnetv4.Models.messageRuleActions::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.messageRuleActions
++Graphdotnetv4.Models.messageRuleActions~~>IAdditionalDataHolder; IParsable
++Graphdotnetv4.Models.messageRuleCollectionResponse::|public|AdditionalData:IDictionary<string, object>
++Graphdotnetv4.Models.messageRuleCollectionResponse::|public|constructor():void
++Graphdotnetv4.Models.messageRuleCollectionResponse::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.messageRuleCollectionResponse::|public|OdataNextLink:string
++Graphdotnetv4.Models.messageRuleCollectionResponse::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.messageRuleCollectionResponse::|public|Value:[Graphdotnetv4.Models.messageRule]
++Graphdotnetv4.Models.messageRuleCollectionResponse::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.messageRuleCollectionResponse
++Graphdotnetv4.Models.messageRuleCollectionResponse~~>IAdditionalDataHolder; IParsable
++Graphdotnetv4.Models.messageRulePredicates::|public|AdditionalData:IDictionary<string, object>
++Graphdotnetv4.Models.messageRulePredicates::|public|BodyContains:[string]
++Graphdotnetv4.Models.messageRulePredicates::|public|BodyOrSubjectContains:[string]
++Graphdotnetv4.Models.messageRulePredicates::|public|Categories:[string]
++Graphdotnetv4.Models.messageRulePredicates::|public|constructor():void
++Graphdotnetv4.Models.messageRulePredicates::|public|FromAddresses:[Graphdotnetv4.Models.recipient]
++Graphdotnetv4.Models.messageRulePredicates::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.messageRulePredicates::|public|HasAttachments:boolean
++Graphdotnetv4.Models.messageRulePredicates::|public|HeaderContains:[string]
++Graphdotnetv4.Models.messageRulePredicates::|public|Importance:Graphdotnetv4.Models.importance
++Graphdotnetv4.Models.messageRulePredicates::|public|IsApprovalRequest:boolean
++Graphdotnetv4.Models.messageRulePredicates::|public|IsAutomaticForward:boolean
++Graphdotnetv4.Models.messageRulePredicates::|public|IsAutomaticReply:boolean
++Graphdotnetv4.Models.messageRulePredicates::|public|IsEncrypted:boolean
++Graphdotnetv4.Models.messageRulePredicates::|public|IsMeetingRequest:boolean
++Graphdotnetv4.Models.messageRulePredicates::|public|IsMeetingResponse:boolean
++Graphdotnetv4.Models.messageRulePredicates::|public|IsNonDeliveryReport:boolean
++Graphdotnetv4.Models.messageRulePredicates::|public|IsPermissionControlled:boolean
++Graphdotnetv4.Models.messageRulePredicates::|public|IsReadReceipt:boolean
++Graphdotnetv4.Models.messageRulePredicates::|public|IsSigned:boolean
++Graphdotnetv4.Models.messageRulePredicates::|public|IsVoicemail:boolean
++Graphdotnetv4.Models.messageRulePredicates::|public|MessageActionFlag:Graphdotnetv4.Models.messageActionFlag
++Graphdotnetv4.Models.messageRulePredicates::|public|NotSentToMe:boolean
++Graphdotnetv4.Models.messageRulePredicates::|public|RecipientContains:[string]
++Graphdotnetv4.Models.messageRulePredicates::|public|SenderContains:[string]
++Graphdotnetv4.Models.messageRulePredicates::|public|Sensitivity:Graphdotnetv4.Models.sensitivity
++Graphdotnetv4.Models.messageRulePredicates::|public|SentCcMe:boolean
++Graphdotnetv4.Models.messageRulePredicates::|public|SentOnlyToMe:boolean
++Graphdotnetv4.Models.messageRulePredicates::|public|SentToAddresses:[Graphdotnetv4.Models.recipient]
++Graphdotnetv4.Models.messageRulePredicates::|public|SentToMe:boolean
++Graphdotnetv4.Models.messageRulePredicates::|public|SentToOrCcMe:boolean
++Graphdotnetv4.Models.messageRulePredicates::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.messageRulePredicates::|public|SubjectContains:[string]
++Graphdotnetv4.Models.messageRulePredicates::|public|WithinSizeRange:Graphdotnetv4.Models.sizeRange
++Graphdotnetv4.Models.messageRulePredicates::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.messageRulePredicates
++Graphdotnetv4.Models.messageRulePredicates~~>IAdditionalDataHolder; IParsable
++Graphdotnetv4.Models.multiValueLegacyExtendedProperty-->Graphdotnetv4.Models.entity
++Graphdotnetv4.Models.multiValueLegacyExtendedProperty::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.multiValueLegacyExtendedProperty::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.multiValueLegacyExtendedProperty::|public|Value:[string]
++Graphdotnetv4.Models.multiValueLegacyExtendedProperty::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.multiValueLegacyExtendedProperty
++Graphdotnetv4.Models.ODataErrors.ErrorDetails::|public|AdditionalData:IDictionary<string, object>
++Graphdotnetv4.Models.ODataErrors.ErrorDetails::|public|Code:string
++Graphdotnetv4.Models.ODataErrors.ErrorDetails::|public|constructor():void
++Graphdotnetv4.Models.ODataErrors.ErrorDetails::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.ODataErrors.ErrorDetails::|public|Message:string
++Graphdotnetv4.Models.ODataErrors.ErrorDetails::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.ODataErrors.ErrorDetails::|public|Target:string
++Graphdotnetv4.Models.ODataErrors.ErrorDetails::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.ODataErrors.ErrorDetails
++Graphdotnetv4.Models.ODataErrors.ErrorDetails~~>IAdditionalDataHolder; IParsable
++Graphdotnetv4.Models.ODataErrors.InnerError::|public|AdditionalData:IDictionary<string, object>
++Graphdotnetv4.Models.ODataErrors.InnerError::|public|constructor():void
++Graphdotnetv4.Models.ODataErrors.InnerError::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.ODataErrors.InnerError::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.ODataErrors.InnerError::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.ODataErrors.InnerError
++Graphdotnetv4.Models.ODataErrors.InnerError~~>IAdditionalDataHolder; IParsable
++Graphdotnetv4.Models.ODataErrors.MainError::|public|AdditionalData:IDictionary<string, object>
++Graphdotnetv4.Models.ODataErrors.MainError::|public|Code:string
++Graphdotnetv4.Models.ODataErrors.MainError::|public|constructor():void
++Graphdotnetv4.Models.ODataErrors.MainError::|public|Details:[Graphdotnetv4.Models.ODataErrors.ErrorDetails]
++Graphdotnetv4.Models.ODataErrors.MainError::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.ODataErrors.MainError::|public|InnerError:Graphdotnetv4.Models.ODataErrors.InnerError
++Graphdotnetv4.Models.ODataErrors.MainError::|public|Message:string
++Graphdotnetv4.Models.ODataErrors.MainError::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.ODataErrors.MainError::|public|Target:string
++Graphdotnetv4.Models.ODataErrors.MainError::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.ODataErrors.MainError
++Graphdotnetv4.Models.ODataErrors.MainError~~>IAdditionalDataHolder; IParsable
++Graphdotnetv4.Models.ODataErrors.ODataError-->ApiException
++Graphdotnetv4.Models.ODataErrors.ODataError::|public|AdditionalData:IDictionary<string, object>
++Graphdotnetv4.Models.ODataErrors.ODataError::|public|constructor():void
++Graphdotnetv4.Models.ODataErrors.ODataError::|public|Error:Graphdotnetv4.Models.ODataErrors.MainError
++Graphdotnetv4.Models.ODataErrors.ODataError::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.ODataErrors.ODataError::|public|Message:string
++Graphdotnetv4.Models.ODataErrors.ODataError::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.ODataErrors.ODataError::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.ODataErrors.ODataError
++Graphdotnetv4.Models.outlookItem-->Graphdotnetv4.Models.entity
++Graphdotnetv4.Models.outlookItem::|public|Categories:[string]
++Graphdotnetv4.Models.outlookItem::|public|ChangeKey:string
++Graphdotnetv4.Models.outlookItem::|public|CreatedDateTime:DateTimeOffset
++Graphdotnetv4.Models.outlookItem::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.outlookItem::|public|LastModifiedDateTime:DateTimeOffset
++Graphdotnetv4.Models.outlookItem::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.outlookItem::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.outlookItem
++Graphdotnetv4.Models.recipient::|public|AdditionalData:IDictionary<string, object>
++Graphdotnetv4.Models.recipient::|public|constructor():void
++Graphdotnetv4.Models.recipient::|public|EmailAddress:Graphdotnetv4.Models.emailAddress
++Graphdotnetv4.Models.recipient::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.recipient::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.recipient::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.recipient
++Graphdotnetv4.Models.recipient~~>IAdditionalDataHolder; IParsable
++Graphdotnetv4.Models.sensitivity::0000-normal
++Graphdotnetv4.Models.sensitivity::0001-personal
++Graphdotnetv4.Models.sensitivity::0002-private
++Graphdotnetv4.Models.sensitivity::0003-confidential
++Graphdotnetv4.Models.singleValueLegacyExtendedProperty-->Graphdotnetv4.Models.entity
++Graphdotnetv4.Models.singleValueLegacyExtendedProperty::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.singleValueLegacyExtendedProperty::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.singleValueLegacyExtendedProperty::|public|Value:string
++Graphdotnetv4.Models.singleValueLegacyExtendedProperty::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.singleValueLegacyExtendedProperty
++Graphdotnetv4.Models.sizeRange::|public|AdditionalData:IDictionary<string, object>
++Graphdotnetv4.Models.sizeRange::|public|constructor():void
++Graphdotnetv4.Models.sizeRange::|public|GetFieldDeserializers():IDictionary<string, Action<IParseNode>>
++Graphdotnetv4.Models.sizeRange::|public|MaximumSize:integer
++Graphdotnetv4.Models.sizeRange::|public|MinimumSize:integer
++Graphdotnetv4.Models.sizeRange::|public|Serialize(writer:ISerializationWriter):void
++Graphdotnetv4.Models.sizeRange::|static|public|CreateFromDiscriminatorValue(parseNode:IParseNode):Graphdotnetv4.Models.sizeRange
++Graphdotnetv4.Models.sizeRange~~>IAdditionalDataHolder; IParsable
++Graphdotnetv4.Users.Item.InferenceClassification.inferenceClassificationRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.InferenceClassification.inferenceClassificationRequestBuilder.inferenceClassificationRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.InferenceClassification.inferenceClassificationRequestBuilder.inferenceClassificationRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.InferenceClassification.inferenceClassificationRequestBuilder.inferenceClassificationRequestBuilderPatchRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.InferenceClassification.inferenceClassificationRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.InferenceClassification.inferenceClassificationRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.InferenceClassification.inferenceClassificationRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.inferenceClassification
++Graphdotnetv4.Users.Item.InferenceClassification.inferenceClassificationRequestBuilder::|public|overrides:Graphdotnetv4.Users.Item.InferenceClassification.Overrides.overridesRequestBuilder
++Graphdotnetv4.Users.Item.InferenceClassification.inferenceClassificationRequestBuilder::|public|PatchAsync(body:Graphdotnetv4.Models.inferenceClassification; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.inferenceClassification
++Graphdotnetv4.Users.Item.InferenceClassification.inferenceClassificationRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.InferenceClassification.inferenceClassificationRequestBuilder::|public|ToPatchRequestInformation(body:Graphdotnetv4.Models.inferenceClassification; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.InferenceClassification.inferenceClassificationRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.InferenceClassification.inferenceClassificationRequestBuilder
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Count.CountRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Count.CountRequestBuilder.CountRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Count.CountRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Count.CountRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Count.CountRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):integer
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Count.CountRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Count.CountRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Item.InferenceClassificationOverrideItemRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Item.InferenceClassificationOverrideItemRequestBuilder.InferenceClassificationOverrideItemRequestBuilderDeleteRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Item.InferenceClassificationOverrideItemRequestBuilder.InferenceClassificationOverrideItemRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Item.InferenceClassificationOverrideItemRequestBuilder.InferenceClassificationOverrideItemRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Item.InferenceClassificationOverrideItemRequestBuilder.InferenceClassificationOverrideItemRequestBuilderPatchRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Item.InferenceClassificationOverrideItemRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Item.InferenceClassificationOverrideItemRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Item.InferenceClassificationOverrideItemRequestBuilder::|public|DeleteAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Stream
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Item.InferenceClassificationOverrideItemRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.inferenceClassificationOverride
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Item.InferenceClassificationOverrideItemRequestBuilder::|public|PatchAsync(body:Graphdotnetv4.Models.inferenceClassificationOverride; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.inferenceClassificationOverride
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Item.InferenceClassificationOverrideItemRequestBuilder::|public|ToDeleteRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Item.InferenceClassificationOverrideItemRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Item.InferenceClassificationOverrideItemRequestBuilder::|public|ToPatchRequestInformation(body:Graphdotnetv4.Models.inferenceClassificationOverride; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Item.InferenceClassificationOverrideItemRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Item.InferenceClassificationOverrideItemRequestBuilder
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.overridesRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.overridesRequestBuilder.overridesRequestBuilderGetQueryParameters::|public|Count:boolean
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.overridesRequestBuilder.overridesRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.overridesRequestBuilder.overridesRequestBuilderGetQueryParameters::|public|Orderby:[string]
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.overridesRequestBuilder.overridesRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.overridesRequestBuilder.overridesRequestBuilderGetQueryParameters::|public|Skip:integer
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.overridesRequestBuilder.overridesRequestBuilderGetQueryParameters::|public|Top:integer
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.overridesRequestBuilder.overridesRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.overridesRequestBuilder.overridesRequestBuilderPostRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.overridesRequestBuilder::[InferenceClassificationOverrideId:string]:Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Item.InferenceClassificationOverrideItemRequestBuilder
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.overridesRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.overridesRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.overridesRequestBuilder::|public|Count:Graphdotnetv4.Users.Item.InferenceClassification.Overrides.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.overridesRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.inferenceClassificationOverrideCollectionResponse
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.overridesRequestBuilder::|public|PostAsync(body:Graphdotnetv4.Models.inferenceClassificationOverride; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.inferenceClassificationOverride
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.overridesRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.overridesRequestBuilder::|public|ToPostRequestInformation(body:Graphdotnetv4.Models.inferenceClassificationOverride; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.InferenceClassification.Overrides.overridesRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.InferenceClassification.Overrides.overridesRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Count.CountRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.MailFolders.Count.CountRequestBuilder.CountRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Count.CountRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Count.CountRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Count.CountRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):integer
++Graphdotnetv4.Users.Item.MailFolders.Count.CountRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Count.CountRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.childFoldersRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.childFoldersRequestBuilder.childFoldersRequestBuilderGetQueryParameters::|public|Count:boolean
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.childFoldersRequestBuilder.childFoldersRequestBuilderGetQueryParameters::|public|Expand:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.childFoldersRequestBuilder.childFoldersRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.childFoldersRequestBuilder.childFoldersRequestBuilderGetQueryParameters::|public|IncludeHiddenFolders:string
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.childFoldersRequestBuilder.childFoldersRequestBuilderGetQueryParameters::|public|Orderby:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.childFoldersRequestBuilder.childFoldersRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.childFoldersRequestBuilder.childFoldersRequestBuilderGetQueryParameters::|public|Skip:integer
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.childFoldersRequestBuilder.childFoldersRequestBuilderGetQueryParameters::|public|Top:integer
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.childFoldersRequestBuilder.childFoldersRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.childFoldersRequestBuilder.childFoldersRequestBuilderPostRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.childFoldersRequestBuilder::[MailFolderId1:string]:Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MailFolderItemRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.childFoldersRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.childFoldersRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.childFoldersRequestBuilder::|public|Count:Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.childFoldersRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.mailFolderCollectionResponse
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.childFoldersRequestBuilder::|public|PostAsync(body:Graphdotnetv4.Models.mailFolder; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.mailFolder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.childFoldersRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.childFoldersRequestBuilder::|public|ToPostRequestInformation(body:Graphdotnetv4.Models.mailFolder; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.childFoldersRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.childFoldersRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Count.CountRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Count.CountRequestBuilder.CountRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Count.CountRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Count.CountRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Count.CountRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):integer
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Count.CountRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Count.CountRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MailFolderItemRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MailFolderItemRequestBuilder.MailFolderItemRequestBuilderDeleteRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MailFolderItemRequestBuilder.MailFolderItemRequestBuilderGetQueryParameters::|public|Expand:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MailFolderItemRequestBuilder.MailFolderItemRequestBuilderGetQueryParameters::|public|IncludeHiddenFolders:string
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MailFolderItemRequestBuilder.MailFolderItemRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MailFolderItemRequestBuilder.MailFolderItemRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MailFolderItemRequestBuilder.MailFolderItemRequestBuilderPatchRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MailFolderItemRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MailFolderItemRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MailFolderItemRequestBuilder::|public|DeleteAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Stream
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MailFolderItemRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.mailFolder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MailFolderItemRequestBuilder::|public|messageRules:Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.messageRulesRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MailFolderItemRequestBuilder::|public|messages:Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.messagesRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MailFolderItemRequestBuilder::|public|PatchAsync(body:Graphdotnetv4.Models.mailFolder; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.mailFolder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MailFolderItemRequestBuilder::|public|ToDeleteRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MailFolderItemRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MailFolderItemRequestBuilder::|public|ToPatchRequestInformation(body:Graphdotnetv4.Models.mailFolder; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MailFolderItemRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MailFolderItemRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Count.CountRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Count.CountRequestBuilder.CountRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Count.CountRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Count.CountRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Count.CountRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):integer
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Count.CountRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Count.CountRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder.MessageRuleItemRequestBuilderDeleteRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder.MessageRuleItemRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder.MessageRuleItemRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder.MessageRuleItemRequestBuilderPatchRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder::|public|DeleteAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Stream
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.messageRule
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder::|public|PatchAsync(body:Graphdotnetv4.Models.messageRule; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.messageRule
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder::|public|ToDeleteRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder::|public|ToPatchRequestInformation(body:Graphdotnetv4.Models.messageRule; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.messageRulesRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.messageRulesRequestBuilder.messageRulesRequestBuilderGetQueryParameters::|public|Count:boolean
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.messageRulesRequestBuilder.messageRulesRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.messageRulesRequestBuilder.messageRulesRequestBuilderGetQueryParameters::|public|Orderby:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.messageRulesRequestBuilder.messageRulesRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.messageRulesRequestBuilder.messageRulesRequestBuilderGetQueryParameters::|public|Skip:integer
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.messageRulesRequestBuilder.messageRulesRequestBuilderGetQueryParameters::|public|Top:integer
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.messageRulesRequestBuilder.messageRulesRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.messageRulesRequestBuilder.messageRulesRequestBuilderPostRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.messageRulesRequestBuilder::[MessageRuleId:string]:Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.messageRulesRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.messageRulesRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.messageRulesRequestBuilder::|public|Count:Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.messageRulesRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.messageRuleCollectionResponse
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.messageRulesRequestBuilder::|public|PostAsync(body:Graphdotnetv4.Models.messageRule; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.messageRule
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.messageRulesRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.messageRulesRequestBuilder::|public|ToPostRequestInformation(body:Graphdotnetv4.Models.messageRule; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.messageRulesRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.MessageRules.messageRulesRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Count.CountRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters::|public|Search:string
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Count.CountRequestBuilder.CountRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Count.CountRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Count.CountRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Count.CountRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):integer
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Count.CountRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Count.CountRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder.attachmentsRequestBuilderGetQueryParameters::|public|Count:boolean
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder.attachmentsRequestBuilderGetQueryParameters::|public|Expand:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder.attachmentsRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder.attachmentsRequestBuilderGetQueryParameters::|public|Orderby:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder.attachmentsRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder.attachmentsRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder.attachmentsRequestBuilderPostRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder::[AttachmentId:string]:Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder::|public|Count:Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.attachmentCollectionResponse
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder::|public|PostAsync(body:Graphdotnetv4.Models.attachment; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.attachment
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder::|public|ToPostRequestInformation(body:Graphdotnetv4.Models.attachment; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.Count.CountRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.Count.CountRequestBuilder.CountRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.Count.CountRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.Count.CountRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.Count.CountRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):integer
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.Count.CountRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.Count.CountRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder.AttachmentItemRequestBuilderDeleteRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder.AttachmentItemRequestBuilderGetQueryParameters::|public|Expand:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder.AttachmentItemRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder.AttachmentItemRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder::|public|DeleteAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Stream
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.attachment
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder::|public|ToDeleteRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder.CountRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):integer
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderGetQueryParameters::|public|Count:boolean
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderGetQueryParameters::|public|Expand:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderGetQueryParameters::|public|Orderby:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderGetQueryParameters::|public|Skip:integer
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderGetQueryParameters::|public|Top:integer
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderPostRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder::[ExtensionId:string]:Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder::|public|Count:Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.extensionCollectionResponse
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder::|public|PostAsync(body:Graphdotnetv4.Models.extension; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.extension
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder::|public|ToPostRequestInformation(body:Graphdotnetv4.Models.extension; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder.ExtensionItemRequestBuilderDeleteRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder.ExtensionItemRequestBuilderGetQueryParameters::|public|Expand:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder.ExtensionItemRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder.ExtensionItemRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder.ExtensionItemRequestBuilderPatchRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|DeleteAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Stream
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.extension
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|PatchAsync(body:Graphdotnetv4.Models.extension; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.extension
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|ToDeleteRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|ToPatchRequestInformation(body:Graphdotnetv4.Models.extension; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.MessageItemRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.MessageItemRequestBuilder.MessageItemRequestBuilderDeleteRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.MessageItemRequestBuilder.MessageItemRequestBuilderGetQueryParameters::|public|Expand:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.MessageItemRequestBuilder.MessageItemRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.MessageItemRequestBuilder.MessageItemRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.MessageItemRequestBuilder.MessageItemRequestBuilderPatchRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.MessageItemRequestBuilder::|public|attachments:Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.MessageItemRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.MessageItemRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.MessageItemRequestBuilder::|public|Content:Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.MessageItemRequestBuilder::|public|DeleteAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Stream
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.MessageItemRequestBuilder::|public|extensions:Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.MessageItemRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.message
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.MessageItemRequestBuilder::|public|PatchAsync(body:Graphdotnetv4.Models.message; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.message
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.MessageItemRequestBuilder::|public|ToDeleteRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.MessageItemRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.MessageItemRequestBuilder::|public|ToPatchRequestInformation(body:Graphdotnetv4.Models.message; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.MessageItemRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.MessageItemRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder.ContentRequestBuilderGetQueryParameters::|public|Format:string
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder.ContentRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder.ContentRequestBuilderPutRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Stream
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder::|public|PutAsync(body:Stream; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Stream
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder::|public|ToPutRequestInformation(body:Stream; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.messagesRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetQueryParameters::|public|Count:boolean
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetQueryParameters::|public|Expand:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetQueryParameters::|public|Orderby:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetQueryParameters::|public|Search:string
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetQueryParameters::|public|Skip:integer
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetQueryParameters::|public|Top:integer
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.messagesRequestBuilder.messagesRequestBuilderPostRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.messagesRequestBuilder::[MessageId:string]:Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.MessageItemRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.messagesRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.messagesRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.messagesRequestBuilder::|public|Count:Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.messagesRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.messageCollectionResponse
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.messagesRequestBuilder::|public|PostAsync(body:Graphdotnetv4.Models.message; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.message
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.messagesRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.messagesRequestBuilder::|public|ToPostRequestInformation(body:Graphdotnetv4.Models.message; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.messagesRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.messagesRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.MailFolderItemRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.MailFolderItemRequestBuilder.MailFolderItemRequestBuilderDeleteRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.MailFolderItemRequestBuilder.MailFolderItemRequestBuilderGetQueryParameters::|public|Expand:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.MailFolderItemRequestBuilder.MailFolderItemRequestBuilderGetQueryParameters::|public|IncludeHiddenFolders:string
++Graphdotnetv4.Users.Item.MailFolders.Item.MailFolderItemRequestBuilder.MailFolderItemRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.MailFolderItemRequestBuilder.MailFolderItemRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.MailFolderItemRequestBuilder.MailFolderItemRequestBuilderPatchRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.MailFolderItemRequestBuilder::|public|childFolders:Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.childFoldersRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.MailFolderItemRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.MailFolderItemRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.MailFolderItemRequestBuilder::|public|DeleteAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Stream
++Graphdotnetv4.Users.Item.MailFolders.Item.MailFolderItemRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.mailFolder
++Graphdotnetv4.Users.Item.MailFolders.Item.MailFolderItemRequestBuilder::|public|messageRules:Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.messageRulesRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.MailFolderItemRequestBuilder::|public|messages:Graphdotnetv4.Users.Item.MailFolders.Item.Messages.messagesRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.MailFolderItemRequestBuilder::|public|PatchAsync(body:Graphdotnetv4.Models.mailFolder; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.mailFolder
++Graphdotnetv4.Users.Item.MailFolders.Item.MailFolderItemRequestBuilder::|public|ToDeleteRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.MailFolderItemRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.MailFolderItemRequestBuilder::|public|ToPatchRequestInformation(body:Graphdotnetv4.Models.mailFolder; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.MailFolderItemRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.MailFolderItemRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Count.CountRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Count.CountRequestBuilder.CountRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Count.CountRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Count.CountRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Count.CountRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):integer
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Count.CountRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Count.CountRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder.MessageRuleItemRequestBuilderDeleteRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder.MessageRuleItemRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder.MessageRuleItemRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder.MessageRuleItemRequestBuilderPatchRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder::|public|DeleteAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Stream
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.messageRule
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder::|public|PatchAsync(body:Graphdotnetv4.Models.messageRule; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.messageRule
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder::|public|ToDeleteRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder::|public|ToPatchRequestInformation(body:Graphdotnetv4.Models.messageRule; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.messageRulesRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.messageRulesRequestBuilder.messageRulesRequestBuilderGetQueryParameters::|public|Count:boolean
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.messageRulesRequestBuilder.messageRulesRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.messageRulesRequestBuilder.messageRulesRequestBuilderGetQueryParameters::|public|Orderby:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.messageRulesRequestBuilder.messageRulesRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.messageRulesRequestBuilder.messageRulesRequestBuilderGetQueryParameters::|public|Skip:integer
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.messageRulesRequestBuilder.messageRulesRequestBuilderGetQueryParameters::|public|Top:integer
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.messageRulesRequestBuilder.messageRulesRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.messageRulesRequestBuilder.messageRulesRequestBuilderPostRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.messageRulesRequestBuilder::[MessageRuleId:string]:Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Item.MessageRuleItemRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.messageRulesRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.messageRulesRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.messageRulesRequestBuilder::|public|Count:Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.messageRulesRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.messageRuleCollectionResponse
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.messageRulesRequestBuilder::|public|PostAsync(body:Graphdotnetv4.Models.messageRule; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.messageRule
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.messageRulesRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.messageRulesRequestBuilder::|public|ToPostRequestInformation(body:Graphdotnetv4.Models.messageRule; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.messageRulesRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.MessageRules.messageRulesRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Count.CountRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters::|public|Search:string
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Count.CountRequestBuilder.CountRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Count.CountRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Count.CountRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Count.CountRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):integer
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Count.CountRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Count.CountRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder.attachmentsRequestBuilderGetQueryParameters::|public|Count:boolean
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder.attachmentsRequestBuilderGetQueryParameters::|public|Expand:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder.attachmentsRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder.attachmentsRequestBuilderGetQueryParameters::|public|Orderby:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder.attachmentsRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder.attachmentsRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder.attachmentsRequestBuilderPostRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder::[AttachmentId:string]:Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder::|public|Count:Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.attachmentCollectionResponse
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder::|public|PostAsync(body:Graphdotnetv4.Models.attachment; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.attachment
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder::|public|ToPostRequestInformation(body:Graphdotnetv4.Models.attachment; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.Count.CountRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.Count.CountRequestBuilder.CountRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.Count.CountRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.Count.CountRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.Count.CountRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):integer
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.Count.CountRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.Count.CountRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder.AttachmentItemRequestBuilderDeleteRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder.AttachmentItemRequestBuilderGetQueryParameters::|public|Expand:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder.AttachmentItemRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder.AttachmentItemRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder::|public|DeleteAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Stream
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.attachment
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder::|public|ToDeleteRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder.CountRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):integer
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderGetQueryParameters::|public|Count:boolean
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderGetQueryParameters::|public|Expand:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderGetQueryParameters::|public|Orderby:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderGetQueryParameters::|public|Skip:integer
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderGetQueryParameters::|public|Top:integer
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderPostRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder::[ExtensionId:string]:Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder::|public|Count:Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.extensionCollectionResponse
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder::|public|PostAsync(body:Graphdotnetv4.Models.extension; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.extension
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder::|public|ToPostRequestInformation(body:Graphdotnetv4.Models.extension; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder.ExtensionItemRequestBuilderDeleteRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder.ExtensionItemRequestBuilderGetQueryParameters::|public|Expand:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder.ExtensionItemRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder.ExtensionItemRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder.ExtensionItemRequestBuilderPatchRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|DeleteAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Stream
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.extension
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|PatchAsync(body:Graphdotnetv4.Models.extension; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.extension
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|ToDeleteRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|ToPatchRequestInformation(body:Graphdotnetv4.Models.extension; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.MessageItemRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.MessageItemRequestBuilder.MessageItemRequestBuilderDeleteRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.MessageItemRequestBuilder.MessageItemRequestBuilderGetQueryParameters::|public|Expand:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.MessageItemRequestBuilder.MessageItemRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.MessageItemRequestBuilder.MessageItemRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.MessageItemRequestBuilder.MessageItemRequestBuilderPatchRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.MessageItemRequestBuilder::|public|attachments:Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Attachments.attachmentsRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.MessageItemRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.MessageItemRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.MessageItemRequestBuilder::|public|Content:Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Value.ContentRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.MessageItemRequestBuilder::|public|DeleteAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Stream
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.MessageItemRequestBuilder::|public|extensions:Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.extensionsRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.MessageItemRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.message
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.MessageItemRequestBuilder::|public|PatchAsync(body:Graphdotnetv4.Models.message; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.message
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.MessageItemRequestBuilder::|public|ToDeleteRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.MessageItemRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.MessageItemRequestBuilder::|public|ToPatchRequestInformation(body:Graphdotnetv4.Models.message; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.MessageItemRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.MessageItemRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Value.ContentRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Value.ContentRequestBuilder.ContentRequestBuilderGetQueryParameters::|public|Format:string
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Value.ContentRequestBuilder.ContentRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Value.ContentRequestBuilder.ContentRequestBuilderPutRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Value.ContentRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Value.ContentRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Value.ContentRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Stream
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Value.ContentRequestBuilder::|public|PutAsync(body:Stream; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Stream
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Value.ContentRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Value.ContentRequestBuilder::|public|ToPutRequestInformation(body:Stream; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Value.ContentRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Value.ContentRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.messagesRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetQueryParameters::|public|Count:boolean
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetQueryParameters::|public|Expand:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetQueryParameters::|public|Orderby:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetQueryParameters::|public|Search:string
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetQueryParameters::|public|Skip:integer
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetQueryParameters::|public|Top:integer
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.messagesRequestBuilder.messagesRequestBuilderPostRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.messagesRequestBuilder::[MessageId:string]:Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.MessageItemRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.messagesRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.messagesRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.messagesRequestBuilder::|public|Count:Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.messagesRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.messageCollectionResponse
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.messagesRequestBuilder::|public|PostAsync(body:Graphdotnetv4.Models.message; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.message
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.messagesRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.messagesRequestBuilder::|public|ToPostRequestInformation(body:Graphdotnetv4.Models.message; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.Item.Messages.messagesRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.Item.Messages.messagesRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.mailFoldersRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.mailFoldersRequestBuilder.mailFoldersRequestBuilderGetQueryParameters::|public|Count:boolean
++Graphdotnetv4.Users.Item.MailFolders.mailFoldersRequestBuilder.mailFoldersRequestBuilderGetQueryParameters::|public|Expand:[string]
++Graphdotnetv4.Users.Item.MailFolders.mailFoldersRequestBuilder.mailFoldersRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.MailFolders.mailFoldersRequestBuilder.mailFoldersRequestBuilderGetQueryParameters::|public|IncludeHiddenFolders:string
++Graphdotnetv4.Users.Item.MailFolders.mailFoldersRequestBuilder.mailFoldersRequestBuilderGetQueryParameters::|public|Orderby:[string]
++Graphdotnetv4.Users.Item.MailFolders.mailFoldersRequestBuilder.mailFoldersRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.MailFolders.mailFoldersRequestBuilder.mailFoldersRequestBuilderGetQueryParameters::|public|Skip:integer
++Graphdotnetv4.Users.Item.MailFolders.mailFoldersRequestBuilder.mailFoldersRequestBuilderGetQueryParameters::|public|Top:integer
++Graphdotnetv4.Users.Item.MailFolders.mailFoldersRequestBuilder.mailFoldersRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.mailFoldersRequestBuilder.mailFoldersRequestBuilderPostRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.MailFolders.mailFoldersRequestBuilder::[MailFolderId:string]:Graphdotnetv4.Users.Item.MailFolders.Item.MailFolderItemRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.mailFoldersRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.mailFoldersRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.MailFolders.mailFoldersRequestBuilder::|public|Count:Graphdotnetv4.Users.Item.MailFolders.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.MailFolders.mailFoldersRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.mailFolderCollectionResponse
++Graphdotnetv4.Users.Item.MailFolders.mailFoldersRequestBuilder::|public|PostAsync(body:Graphdotnetv4.Models.mailFolder; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.mailFolder
++Graphdotnetv4.Users.Item.MailFolders.mailFoldersRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.mailFoldersRequestBuilder::|public|ToPostRequestInformation(body:Graphdotnetv4.Models.mailFolder; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.MailFolders.mailFoldersRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.MailFolders.mailFoldersRequestBuilder
++Graphdotnetv4.Users.Item.Messages.Count.CountRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.Messages.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.Messages.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters::|public|Search:string
++Graphdotnetv4.Users.Item.Messages.Count.CountRequestBuilder.CountRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.Messages.Count.CountRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.Messages.Count.CountRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.Messages.Count.CountRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):integer
++Graphdotnetv4.Users.Item.Messages.Count.CountRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.Messages.Count.CountRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.Messages.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.attachmentsRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.attachmentsRequestBuilder.attachmentsRequestBuilderGetQueryParameters::|public|Count:boolean
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.attachmentsRequestBuilder.attachmentsRequestBuilderGetQueryParameters::|public|Expand:[string]
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.attachmentsRequestBuilder.attachmentsRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.attachmentsRequestBuilder.attachmentsRequestBuilderGetQueryParameters::|public|Orderby:[string]
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.attachmentsRequestBuilder.attachmentsRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.attachmentsRequestBuilder.attachmentsRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.attachmentsRequestBuilder.attachmentsRequestBuilderPostRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.attachmentsRequestBuilder::[AttachmentId:string]:Graphdotnetv4.Users.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.attachmentsRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.attachmentsRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.attachmentsRequestBuilder::|public|Count:Graphdotnetv4.Users.Item.Messages.Item.Attachments.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.attachmentsRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.attachmentCollectionResponse
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.attachmentsRequestBuilder::|public|PostAsync(body:Graphdotnetv4.Models.attachment; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.attachment
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.attachmentsRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.attachmentsRequestBuilder::|public|ToPostRequestInformation(body:Graphdotnetv4.Models.attachment; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.attachmentsRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.Messages.Item.Attachments.attachmentsRequestBuilder
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.Count.CountRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.Count.CountRequestBuilder.CountRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.Count.CountRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.Count.CountRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.Count.CountRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):integer
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.Count.CountRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.Count.CountRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.Messages.Item.Attachments.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder.AttachmentItemRequestBuilderDeleteRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder.AttachmentItemRequestBuilderGetQueryParameters::|public|Expand:[string]
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder.AttachmentItemRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder.AttachmentItemRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder::|public|DeleteAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Stream
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.attachment
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder::|public|ToDeleteRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.Messages.Item.Attachments.Item.AttachmentItemRequestBuilder
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.Count.CountRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.Count.CountRequestBuilder.CountRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.Count.CountRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.Count.CountRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.Count.CountRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):integer
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.Count.CountRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.Count.CountRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.Messages.Item.Extensions.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.extensionsRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderGetQueryParameters::|public|Count:boolean
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderGetQueryParameters::|public|Expand:[string]
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderGetQueryParameters::|public|Orderby:[string]
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderGetQueryParameters::|public|Skip:integer
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderGetQueryParameters::|public|Top:integer
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.extensionsRequestBuilder.extensionsRequestBuilderPostRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.extensionsRequestBuilder::[ExtensionId:string]:Graphdotnetv4.Users.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.extensionsRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.extensionsRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.extensionsRequestBuilder::|public|Count:Graphdotnetv4.Users.Item.Messages.Item.Extensions.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.extensionsRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.extensionCollectionResponse
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.extensionsRequestBuilder::|public|PostAsync(body:Graphdotnetv4.Models.extension; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.extension
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.extensionsRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.extensionsRequestBuilder::|public|ToPostRequestInformation(body:Graphdotnetv4.Models.extension; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.extensionsRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.Messages.Item.Extensions.extensionsRequestBuilder
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder.ExtensionItemRequestBuilderDeleteRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder.ExtensionItemRequestBuilderGetQueryParameters::|public|Expand:[string]
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder.ExtensionItemRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder.ExtensionItemRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder.ExtensionItemRequestBuilderPatchRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|DeleteAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Stream
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.extension
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|PatchAsync(body:Graphdotnetv4.Models.extension; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.extension
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|ToDeleteRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|ToPatchRequestInformation(body:Graphdotnetv4.Models.extension; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.Messages.Item.Extensions.Item.ExtensionItemRequestBuilder
++Graphdotnetv4.Users.Item.Messages.Item.MessageItemRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.Messages.Item.MessageItemRequestBuilder.MessageItemRequestBuilderDeleteRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.Messages.Item.MessageItemRequestBuilder.MessageItemRequestBuilderGetQueryParameters::|public|Expand:[string]
++Graphdotnetv4.Users.Item.Messages.Item.MessageItemRequestBuilder.MessageItemRequestBuilderGetQueryParameters::|public|IncludeHiddenMessages:string
++Graphdotnetv4.Users.Item.Messages.Item.MessageItemRequestBuilder.MessageItemRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.Messages.Item.MessageItemRequestBuilder.MessageItemRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.Messages.Item.MessageItemRequestBuilder.MessageItemRequestBuilderPatchRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.Messages.Item.MessageItemRequestBuilder::|public|attachments:Graphdotnetv4.Users.Item.Messages.Item.Attachments.attachmentsRequestBuilder
++Graphdotnetv4.Users.Item.Messages.Item.MessageItemRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.Messages.Item.MessageItemRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.Messages.Item.MessageItemRequestBuilder::|public|Content:Graphdotnetv4.Users.Item.Messages.Item.Value.ContentRequestBuilder
++Graphdotnetv4.Users.Item.Messages.Item.MessageItemRequestBuilder::|public|DeleteAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Stream
++Graphdotnetv4.Users.Item.Messages.Item.MessageItemRequestBuilder::|public|extensions:Graphdotnetv4.Users.Item.Messages.Item.Extensions.extensionsRequestBuilder
++Graphdotnetv4.Users.Item.Messages.Item.MessageItemRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.message
++Graphdotnetv4.Users.Item.Messages.Item.MessageItemRequestBuilder::|public|PatchAsync(body:Graphdotnetv4.Models.message; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.message
++Graphdotnetv4.Users.Item.Messages.Item.MessageItemRequestBuilder::|public|ToDeleteRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.Messages.Item.MessageItemRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.Messages.Item.MessageItemRequestBuilder::|public|ToPatchRequestInformation(body:Graphdotnetv4.Models.message; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.Messages.Item.MessageItemRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.Messages.Item.MessageItemRequestBuilder
++Graphdotnetv4.Users.Item.Messages.Item.Value.ContentRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.Messages.Item.Value.ContentRequestBuilder.ContentRequestBuilderGetQueryParameters::|public|Format:string
++Graphdotnetv4.Users.Item.Messages.Item.Value.ContentRequestBuilder.ContentRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.Messages.Item.Value.ContentRequestBuilder.ContentRequestBuilderPutRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.Messages.Item.Value.ContentRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.Messages.Item.Value.ContentRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.Messages.Item.Value.ContentRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Stream
++Graphdotnetv4.Users.Item.Messages.Item.Value.ContentRequestBuilder::|public|PutAsync(body:Stream; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Stream
++Graphdotnetv4.Users.Item.Messages.Item.Value.ContentRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.Messages.Item.Value.ContentRequestBuilder::|public|ToPutRequestInformation(body:Stream; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.Messages.Item.Value.ContentRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.Messages.Item.Value.ContentRequestBuilder
++Graphdotnetv4.Users.Item.Messages.messagesRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetQueryParameters::|public|Count:boolean
++Graphdotnetv4.Users.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetQueryParameters::|public|Expand:[string]
++Graphdotnetv4.Users.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetQueryParameters::|public|Filter:string
++Graphdotnetv4.Users.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetQueryParameters::|public|IncludeHiddenMessages:string
++Graphdotnetv4.Users.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetQueryParameters::|public|Orderby:[string]
++Graphdotnetv4.Users.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetQueryParameters::|public|Search:string
++Graphdotnetv4.Users.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetQueryParameters::|public|Select:[string]
++Graphdotnetv4.Users.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetQueryParameters::|public|Skip:integer
++Graphdotnetv4.Users.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetQueryParameters::|public|Top:integer
++Graphdotnetv4.Users.Item.Messages.messagesRequestBuilder.messagesRequestBuilderGetRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.Messages.messagesRequestBuilder.messagesRequestBuilderPostRequestConfiguration-->RequestConfiguration
++Graphdotnetv4.Users.Item.Messages.messagesRequestBuilder::[MessageId:string]:Graphdotnetv4.Users.Item.Messages.Item.MessageItemRequestBuilder
++Graphdotnetv4.Users.Item.Messages.messagesRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.Messages.messagesRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.Messages.messagesRequestBuilder::|public|Count:Graphdotnetv4.Users.Item.Messages.Count.CountRequestBuilder
++Graphdotnetv4.Users.Item.Messages.messagesRequestBuilder::|public|GetAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.messageCollectionResponse
++Graphdotnetv4.Users.Item.Messages.messagesRequestBuilder::|public|PostAsync(body:Graphdotnetv4.Models.message; requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Graphdotnetv4.Models.message
++Graphdotnetv4.Users.Item.Messages.messagesRequestBuilder::|public|ToGetRequestInformation(requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.Messages.messagesRequestBuilder::|public|ToPostRequestInformation(body:Graphdotnetv4.Models.message; requestConfiguration?:RequestConfiguration):RequestInformation
++Graphdotnetv4.Users.Item.Messages.messagesRequestBuilder::|public|WithUrl(rawUrl:string):Graphdotnetv4.Users.Item.Messages.messagesRequestBuilder
++Graphdotnetv4.Users.Item.UserItemRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.Item.UserItemRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.UserItemRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.Item.UserItemRequestBuilder::|public|inferenceClassification:Graphdotnetv4.Users.Item.InferenceClassification.inferenceClassificationRequestBuilder
++Graphdotnetv4.Users.Item.UserItemRequestBuilder::|public|mailFolders:Graphdotnetv4.Users.Item.MailFolders.mailFoldersRequestBuilder
++Graphdotnetv4.Users.Item.UserItemRequestBuilder::|public|messages:Graphdotnetv4.Users.Item.Messages.messagesRequestBuilder
++Graphdotnetv4.Users.usersRequestBuilder-->BaseRequestBuilder
++Graphdotnetv4.Users.usersRequestBuilder::[UserId:string]:Graphdotnetv4.Users.Item.UserItemRequestBuilder
++Graphdotnetv4.Users.usersRequestBuilder::|public|constructor(pathParameters:Dictionary<string, object>; requestAdapter:IRequestAdapter):void
++Graphdotnetv4.Users.usersRequestBuilder::|public|constructor(rawUrl:string; requestAdapter:IRequestAdapter):void
