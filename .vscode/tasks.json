@@ -15,7 +15,7 @@
       "type": "dotnet",
       "task": "test",
       "group": { "kind": "test", "isDefault": true },
-	  "label": "dotnet: test"
+	    "label": "dotnet: test"
     }
   ]
 }
