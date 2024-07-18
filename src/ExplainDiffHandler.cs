@@ -1,5 +1,6 @@
 ﻿using System.CommandLine;
 using System.CommandLine.Invocation;
+using System.Text;
 using Microsoft.Extensions.Logging;
 
 namespace Microsoft.KiotaDomExportDiffTool;
@@ -58,16 +59,34 @@ internal class ExplainDiffHandler : ICommandHandler
                 diffValue = await File.ReadAllTextAsync(pathValue, cancellationToken).ConfigureAwait(false);
             }
             var result = diffExplanationService.ExplainDiff(diffValue);
+            var sb = new StringBuilder();
             foreach(var diff in result)
             {
-                Console.WriteLine(diff.ToString());
+                sb.AppendLine(diff.ToString());
             }
+            var explanationResult = sb.ToString();
+            Console.WriteLine(explanationResult);
+            await WriteToGitHubOutput(explanationResult).ConfigureAwait(false);
+            
             if (Array.Exists(result, static x => x.Kind is DifferenceKind.Removal) && failOnRemovalValue)
             {
                 logger.LogCritical("A removal was detected and the process was configured to fail on removals");
                 return 1;
             }
             return 0;
+        }
+    }
+    private static async Task WriteToGitHubOutput(string explanationResult)
+    {
+        // https://docs.github.com/actions/reference/workflow-commands-for-github-actions#setting-an-output-parameter
+        // ::set-output deprecated as mentioned in https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
+        var githubOutputFile = Environment.GetEnvironmentVariable("GITHUB_OUTPUT", EnvironmentVariableTarget.Process);
+        if (!string.IsNullOrWhiteSpace(githubOutputFile))
+        {
+            using var textWriter = new StreamWriter(githubOutputFile!, true, Encoding.UTF8);
+            await textWriter.WriteLineAsync("explanations<<EOF").ConfigureAwait(false);
+            await textWriter.WriteLineAsync(explanationResult).ConfigureAwait(false);
+            await textWriter.WriteLineAsync("EOF").ConfigureAwait(false);
         }
     }
     protected (ILoggerFactory, ILogger<T>) GetLoggerAndFactory<T>(InvocationContext context, string logFileRootPath = "")

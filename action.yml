@@ -1,0 +1,33 @@
+name: 'Kiota dom export diff tool'
+description: 'Analyzes the differences between two Kiota DOM exports for source breaking changes in the public API surface'
+branding:
+  icon: activity
+  color: orange
+inputs:
+  diff:
+    description:
+      'Inline diff between two Kiota DOM exports.'
+    required: false
+  path:
+    description:
+      'Path to the Kiota DOM export patch file.'
+    required: false
+  fail-on-removal:
+    description:
+      'Return a non zero exit code if any removal is detected'
+    required: false
+    default: 'false'
+outputs:
+  explanations:
+    description:
+      'The explanations of changes that happened to the public API surface'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+  - '--path'
+  - ${{ inputs.path }}
+  - '--diff'
+  - ${{ inputs.diff }}
+  - '--fail-on-removal'
+  - ${{ inputs.fail-on-removal }}
