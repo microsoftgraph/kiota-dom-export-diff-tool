@@ -25,6 +25,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
+  - 'explain'
   - '--path'
   - ${{ inputs.path }}
   - '--diff'
