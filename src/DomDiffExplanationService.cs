@@ -13,7 +13,7 @@ public class DomDiffExplanationService
     }
     internal Difference[] ExplainDiff(string diffValue)
     {
-        var diffBody = CleanupLocationLines(CleanupDiffHeaderAndFooter(diffValue));
+        var diffBody = CleanupLocationLines(CleanupDiffHeaderAndFooter(CleanupNoNewLineComment(diffValue)));
         return SplitLines(diffBody).AsParallel().Select(ParseLine).OfType<Difference>().ToArray();
     }
     private static readonly Func<string, IDomExportEntry?>[] parsers = [
@@ -76,4 +76,6 @@ public class DomDiffExplanationService
         string.Join(LineReturnChar, SplitLines(diffValue)
             .Where(static x => !x.StartsWith("@@", StringComparison.OrdinalIgnoreCase))
             .Select(static x => x.Trim()));
+    internal string CleanupNoNewLineComment(string diffValue) =>
+        diffValue.Replace("\\ No newline at end of file", string.Empty).TrimEnd();
 }

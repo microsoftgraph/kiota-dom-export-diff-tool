@@ -29,6 +29,15 @@ public sealed class DomDiffExplanationServiceTests : IDisposable
         var result = service.CleanupLocationLines(testContent);
         Assert.DoesNotContain("@@", result, StringComparison.OrdinalIgnoreCase);
     }
+    [Fact]
+    public void RemovesNoNewLineComment()
+    {
+        var testContent = "\\ No newline at end of file";
+        var logger = Mock.Of<ILogger>();
+        var service = new DomDiffExplanationService(logger);
+        var result = service.CleanupNoNewLineComment(testContent);
+        Assert.Empty(result);
+    }
 
     public void Dispose()
     {
