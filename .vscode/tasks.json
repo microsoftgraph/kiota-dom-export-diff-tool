@@ -9,13 +9,19 @@
         "isDefault": true
       },
       "problemMatcher": [],
-      "label": "dotnet: build"
+      "label": "dotnet: build",
+      "options": {
+        "cwd": "${workspaceFolder}/tool"
+      }
     },
     {
       "type": "dotnet",
       "task": "test",
       "group": { "kind": "test", "isDefault": true },
-	    "label": "dotnet: test"
+	    "label": "dotnet: test",
+      "options": {
+        "cwd": "${workspaceFolder}/tool"
+      }
     }
   ]
 }
