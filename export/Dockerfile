@@ -1,7 +1,7 @@
 FROM mcr.microsoft.com/powershell
 
-WORKDIR /app
-COPY ./generateDomPatch.ps1 ./
+RUN mkdir /scripts
+COPY ./generateDomPatch.ps1 ./scripts
 
 LABEL maintainer="Vincent Biret <vincent.biret@microsoft.com>"
 LABEL repository="https://github.com/baywet/kiota-dom-export-diff-tool"
@@ -16,4 +16,4 @@ LABEL com.github.actions.description="Creates a diff between two Kiota generated
 LABEL com.github.actions.icon="activity"
 LABEL com.github.actions.color="orange"
 
-ENTRYPOINT [ "pwsh", "-c", "./generateDomPatch.ps1" ]
+ENTRYPOINT [ "pwsh", "-c", "/scripts/generateDomPatch.ps1" ]
