@@ -16,7 +16,6 @@ inputs:
     description:
       'The end sha of the commit to compare the current state to.'
     required: false
-    default: 'false'
 outputs:
   patchFilePath:
     description:
