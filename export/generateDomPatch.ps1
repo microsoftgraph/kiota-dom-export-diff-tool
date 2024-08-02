@@ -42,6 +42,7 @@ if ($null -eq $relativePath) {
             git checkout $branchName
         } elseif ("pull_request" -eq $Env:GITHUB_EVENT_NAME -and (Test-Path Env:GITHUB_HEAD_REF)) {
             $branchName = $Env:GITHUB_HEAD_REF
+            git fetch origin $branchName
             git checkout $branchName
         }
     }
