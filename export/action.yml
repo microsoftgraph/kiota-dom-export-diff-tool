@@ -26,4 +26,7 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  entrypoint: pwsh -c "/scripts/generateDomPatch.ps1 -fileNameToDiff ${{inputs.fileNameToDiff}} -initialCommitSha ${{inputs.initialCommitSha}} -finalCommitSha ${{inputs.finalCommitSha}}"
+  env:
+    fileNameToDiff: ${{inputs.fileNameToDiff}}
+    initialCommitSha: ${{inputs.initialCommitSha}}
+    finalCommitSha: ${{inputs.finalCommitSha}}

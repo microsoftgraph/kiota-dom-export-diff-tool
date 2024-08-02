@@ -15,6 +15,15 @@ catch [System.Management.Automation.CommandNotFoundException]
     Write-Error "git is not installed"
     exit 1
 }
+if (Test-Path Env:fileNameToDiff) {
+    $fileNameToDiff = $env:fileNameToDiff
+}
+if (Test-Path Env:initialCommitSha) {
+    $initialCommitSha = $env:initialCommitSha
+}
+if (Test-Path Env:finalCommitSha) {
+    $finalCommitSha = $env:finalCommitSha
+}
 if ($null -eq $fileNameToDiff -or "" -eq $fileNameToDiff) {
     $fileNameToDiff = "kiota-dom-export.txt"
 }
