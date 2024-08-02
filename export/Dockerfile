@@ -3,6 +3,10 @@ FROM mcr.microsoft.com/powershell
 RUN mkdir /scripts
 COPY ./generateDomPatch.ps1 ./scripts
 
+RUN apt-get -y update &&\
+    apt-get -y install git &&\
+    apt-get clean
+
 LABEL maintainer="Vincent Biret <vincent.biret@microsoft.com>"
 LABEL repository="https://github.com/baywet/kiota-dom-export-diff-tool"
 LABEL homepage="https://github.com/baywet/kiota-dom-export-diff-tool"
