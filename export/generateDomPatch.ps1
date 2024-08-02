@@ -35,6 +35,16 @@ if ($null -eq $relativePath) {
         #ignore ownership errors when running from a container
         git config --global --add safe.directory $Env:GITHUB_WORKSPACE
     }
+    if (Test-Path Env:GITHUB_EVENT_NAME) {
+        # Disable detached head so we get a patch
+        if ("push" -eq $Env:GITHUB_EVENT_NAME -and (Test-Path Env:GITHUB_REF)) {
+            $branchName = $Env:GITHUB_REF -replace "refs/heads/", ""
+            git checkout $branchName
+        } elseif ("pull_request" -eq $Env:GITHUB_EVENT_NAME -and (Test-Path Env:GITHUB_HEAD_REF)) {
+            $branchName = $Env:GITHUB_HEAD_REF
+            git checkout $branchName
+        }
+    }
     if ($initialCommitSha -eq "" -or $finalCommitSha -eq "") {
         $result = git format-patch -1 HEAD --minimal -U0 -w $relativePath
     } else {
