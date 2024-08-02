@@ -6,6 +6,15 @@ param (
     [string]
     $finalCommitSha = ""
 )
+try
+{
+    git --version | Out-Null
+}
+catch [System.Management.Automation.CommandNotFoundException]
+{
+    Write-Error "git is not installed"
+    exit 1
+}
 if ($null -eq $fileNameToDiff -or "" -eq $fileNameToDiff) {
     $fileNameToDiff = "kiota-dom-export.txt"
 }
