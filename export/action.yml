@@ -1,0 +1,36 @@
+name: 'Kiota dom export diff tool'
+description: 'Analyzes the differences between two Kiota DOM exports for source breaking changes in the public API surface'
+branding:
+  icon: activity
+  color: orange
+inputs:
+  fileNameToDiff:
+    description:
+      'Path to the Kiota DOM export file to compare.'
+    required: false
+  initialCommitSha:
+    description:
+      'The start sha of the commit to compare the current state to.'
+    required: false
+  finalCommitSha:
+    description:
+      'The end sha of the commit to compare the current state to.'
+    required: false
+    default: 'false'
+outputs:
+  patchFilePath:
+    description:
+      'The path to the patch file containing the differences between the two Kiota DOM exports.'
+  isFilePresent:
+    description:
+      'Whether the file to diff is present or not'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - -fileNameToDiff
+    - ${{inputs.fileNameToDiff}}
+    - -initialCommitSha
+    - ${{inputs.initialCommitSha}}
+    - -finalCommitSha
+    - ${{inputs.finalCommitSha}}
