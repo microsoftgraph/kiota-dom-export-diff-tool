@@ -31,6 +31,10 @@ $relativePath = Get-ChildItem -Recurse -Filter $fileNameToDiff | Select-Object -
 if ($null -eq $relativePath) {
     Write-Warning "No file found with the name $fileNameToDiff"
 } else {
+    if (Test-Path Env:GITHUB_WORKSPACE) {
+        #ignore ownership errors when running from a container
+        git config --global --add safe.directory $Env:GITHUB_WORKSPACE
+    }
     if ($initialCommitSha -eq "" -or $finalCommitSha -eq "") {
         $result = git format-patch -1 HEAD --minimal -U0 -w $relativePath
     } else {
