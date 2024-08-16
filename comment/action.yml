@@ -1,0 +1,18 @@
+name: 'Comment rotation action'
+description: 'Adds a comment to the PR and removes previously added comment if it already ran on the PR.'
+branding:
+  icon: activity
+  color: orange
+inputs:
+  comment:
+    description:
+      'Comment to post'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    COMMENT: ${{inputs.comment}}
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    PR_NUMBER: ${{ github.event.pull_request.number }}
+    GITHUB_REPOSITORY: ${{ github.repository }}
