@@ -12,11 +12,8 @@ inputs:
     description:
       'PR number to post the comment on'
     required: true
-  GITHUB_TOKEN:
+  GH_TOKEN:
     description: 'GitHub token to post/remove comments. The workflow must have the permissions: `issues: write` and `pull-requests: write`.'
-    required: true
-  GITHUB_REPOSITORY:
-    description: 'The repository where the PR is located. e.g. `microsoftgraph/kiota`'
     required: true
 runs:
   using: 'docker'
@@ -24,5 +21,4 @@ runs:
   env:
     COMMENT: ${{inputs.comment}}
     PR_NUMBER: ${{inputs.prNumber}}
-    GH_TOKEN: ${{inputs.GITHUB_TOKEN}}
-    GITHUB_REPOSITORY: ${{inputs.GITHUB_REPOSITORY}}
+    GH_TOKEN: ${{inputs.GH_TOKEN}}
