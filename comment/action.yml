@@ -8,11 +8,13 @@ inputs:
     description:
       'Comment to post'
     required: true
+  prNumber:
+    description:
+      'PR number to post the comment on'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
     COMMENT: ${{inputs.comment}}
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    PR_NUMBER: ${{ github.event.pull_request.number }}
-    GITHUB_REPOSITORY: ${{ github.repository }}
+    PR_NUMBER: ${{inputs.prNumber}}
