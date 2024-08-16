@@ -7,19 +7,15 @@ on:
     branches: [ "main" ]
 
 jobs:
-
   build:
+    strategy:
+      matrix:
+        dockerfile: [ 'export', 'tool', 'comment' ]
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
-    - name: Build the Docker export
+    - name: Build the Docker ${{ matrix.dockerfile }} image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
-      working-directory: ./export
-    - name: Build the Docker tool
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
-      working-directory: ./tool
-    - name: Build the Docker comment
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
-      working-directory: ./comment
+      working-directory: ./${{ matrix.dockerfile }}
