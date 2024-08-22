@@ -1,18 +1,19 @@
-namespace Microsoft.KiotaDomExportDiffTool.Tests;
+﻿namespace Microsoft.KiotaDomExportDiffTool.Tests;
 
 public sealed class DomExportEntryTests
 {
-    [InlineData("Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters::|public|Search:string", "string")]
-    [InlineData("Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters::|public|Search:string[]", "string[]")]
+    [InlineData("Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters::|public|Search:string", "Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters", "Search", "string")]
+    [InlineData("Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters::|public|Search:string[]", "Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters", "Search", "string[]")]
+    [InlineData("Microsoft.Graph.Chats.GetAllRetainedMessages.getAllRetainedMessagesGetResponse::|public|Value:List<global.Microsoft.Graph.Models.ChatMessage>", "Microsoft.Graph.Chats.GetAllRetainedMessages.getAllRetainedMessagesGetResponse", "Value", "List<global.Microsoft.Graph.Models.ChatMessage>")]
     [Theory]
-    public void ParsesDomProperty(string value, string expectedType)
+    public void ParsesDomProperty(string value, string expectedParentTypePath, string propertyName, string expectedType)
     {
         var result = PropertyDomEntry.Parse(value);
         Assert.NotNull(result);
-        Assert.Equal("Graphdotnetv4.Users.Item.MailFolders.Item.Messages.Item.Extensions.Count.CountRequestBuilder.CountRequestBuilderGetQueryParameters", result.ParentTypePath);
+        Assert.Equal(expectedParentTypePath, result.ParentTypePath);
         Assert.False(result.isStatic);
         Assert.Equal(AccessModifier.Public, result.AccessModifier);
-        Assert.Equal("Search", result.Name);
+        Assert.Equal(propertyName, result.Name);
         Assert.Equal(expectedType, result.TypeName);
     }
     [InlineData("Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder::|public|DeleteAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Stream", "Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder", "DeleteAsync", "requestConfiguration", "RequestConfiguration", "cancellationToken", "CancellationToken", "Stream", true, true)]
