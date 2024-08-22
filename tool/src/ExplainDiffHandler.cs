@@ -60,14 +60,14 @@ internal class ExplainDiffHandler : ICommandHandler
             }
             var result = diffExplanationService.ExplainDiff(diffValue);
             var sb = new StringBuilder();
-            foreach(var diff in result)
+            foreach (var diff in result)
             {
                 sb.AppendLine(diff.ToString());
             }
             var explanationResult = sb.ToString();
             Console.WriteLine(explanationResult);
             await WriteToGitHubOutput(explanationResult).ConfigureAwait(false);
-            
+
             if (Array.Exists(result, static x => x.Kind is DifferenceKind.Removal) && failOnRemovalValue)
             {
                 logger.LogCritical("A removal was detected and the process was configured to fail on removals");

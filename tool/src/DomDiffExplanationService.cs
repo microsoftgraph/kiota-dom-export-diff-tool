@@ -50,7 +50,7 @@ public class DomDiffExplanationService
         {
             return string.Empty;
         }
-        var headerCloserIndex = diffValue.IndexOf(DiffHeaderCloseTag);
+        var headerCloserIndex = diffValue.IndexOf(DiffHeaderCloseTag, StringComparison.OrdinalIgnoreCase);
         if (headerCloserIndex >= 0)
         {
             headerCloserIndex = diffValue.IndexOf(LineReturnChar, headerCloserIndex);
@@ -59,7 +59,7 @@ public class DomDiffExplanationService
         {
             headerCloserIndex = 0;
         }
-        var footerOpenerIndex = diffValue.LastIndexOf(DiffFooterOpenTag);
+        var footerOpenerIndex = diffValue.LastIndexOf(DiffFooterOpenTag, StringComparison.OrdinalIgnoreCase);
         if (footerOpenerIndex >= 0)
         {
             footerOpenerIndex = diffValue.LastIndexOf(LineReturnChar, footerOpenerIndex);

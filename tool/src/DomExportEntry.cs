@@ -37,7 +37,7 @@ public partial record PropertyDomEntry(string ParentTypePath, bool isStatic, Acc
 public partial record ParameterDomEntry(string Name, string TypeName, bool isOptional) : IDomExportEntry
 {
     //requestConfiguration?:RequestConfiguration
-    [GeneratedRegex(@"(?<name>[\w]+)(?<isOptional>\?)?:(?<typeName>[\w\[\]\s<>,]+)")]
+    [GeneratedRegex(@"(?<name>[\w]+)(?<isOptional>\?)?:(?<typeName>[\w\[\]\s<>,.*]+)")]
     private static partial Regex _regex();
     public static ParameterDomEntry? Parse(string content)
     {
@@ -56,7 +56,7 @@ public partial record ParameterDomEntry(string Name, string TypeName, bool isOpt
 public partial record MethodDomEntry(string ParentTypePath, bool isStatic, AccessModifier AccessModifier, string Name, string ReturnTypeName, ParameterDomEntry[] Parameters) : IDomExportEntry
 {
     //Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder::|public|DeleteAsync(requestConfiguration?:RequestConfiguration; cancellationToken?:CancellationToken):Stream
-    [GeneratedRegex(@"(?<parentTypePathName>[\w.]+)::(?:\|(?<static>static))?\|(?<access>(public|protected))\|(?<name>[\w]+)\((?<parameters>.*)?\):(?<returnTypeName>[\w\[\]\s<>,]+)")]
+    [GeneratedRegex(@"(?<parentTypePathName>[\w.]+)::(?:\|(?<static>static))?\|(?<access>(public|protected))\|(?<name>[\w]+)\((?<parameters>.*)?\):(?<returnTypeName>[\w.*\[\]\s<>,]+)")]
     private static partial Regex _regex();
     public static MethodDomEntry? Parse(string content)
     {
@@ -105,7 +105,7 @@ public partial record InheritanceDomEntry(string CurrentTypePath, string ParentT
 public partial record ImplementationDomEntry(string CurrentTypePath, string[] InterfaceTypePaths) : IDomExportEntry
 {
     //Graphdotnetv4.Users.Item.MailFolders.Item.ChildFolders.Item.Messages.Item.Value.ContentRequestBuilder.ContentRequestBuilderDeleteRequestConfiguration~~>RequestConfiguration
-    [GeneratedRegex(@"(?<currentType>[\w.]+)~~>(?<interfaceTypes>[\w.;\s]+)")]
+    [GeneratedRegex(@"(?<currentType>[\w.]+)~~>(?<interfaceTypes>[\w.*;\s]+)")]
     private static partial Regex _regex();
     public static ImplementationDomEntry? Parse(string content)
     {

@@ -40,7 +40,7 @@ public static partial class DiffToolHost
         };
         return command;
     }
-    internal static Option<LogLevel> GetLogLevelOption()
+    private static Option<LogLevel> GetLogLevelOption()
     {
 #if DEBUG
         static LogLevel DefaultLogLevel() => LogLevel.Debug;
