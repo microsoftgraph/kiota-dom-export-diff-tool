@@ -87,6 +87,7 @@ internal class ExplainDiffHandler : ICommandHandler
             await textWriter.WriteLineAsync("explanations<<EOF").ConfigureAwait(false);
             await textWriter.WriteLineAsync(explanationResult).ConfigureAwait(false);
             await textWriter.WriteLineAsync("EOF").ConfigureAwait(false);
+            await textWriter.WriteLineAsync("hasExplanations=true").ConfigureAwait(false);
         }
     }
     protected (ILoggerFactory, ILogger<T>) GetLoggerAndFactory<T>(InvocationContext context, string logFileRootPath = "")
