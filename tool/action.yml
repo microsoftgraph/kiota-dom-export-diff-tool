@@ -20,7 +20,10 @@ inputs:
 outputs:
   explanations:
     description:
-      'The explanations of changes that happened to the public API surface'
+      'Summary of explanations of changes that happened to the public API surface'
+  hasExplanations:
+    description:
+      'Boolean to indicate if there are any explanations'
 runs:
   using: 'docker'
   image: 'Dockerfile'
