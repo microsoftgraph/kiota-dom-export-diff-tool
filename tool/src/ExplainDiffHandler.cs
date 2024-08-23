@@ -66,7 +66,7 @@ internal class ExplainDiffHandler : ICommandHandler
             }
             var explanationResult = sb.ToString();
             Console.WriteLine(explanationResult);
-            await WriteToGitHubOutput(explanationResult).ConfigureAwait(false);
+            await WriteToGitHubOutput(result).ConfigureAwait(false);
 
             if (Array.Exists(result, static x => x.Kind is DifferenceKind.Removal) && failOnRemovalValue)
             {
@@ -76,16 +76,29 @@ internal class ExplainDiffHandler : ICommandHandler
             return 0;
         }
     }
-    private static async Task WriteToGitHubOutput(string explanationResult)
+    private static async Task WriteToGitHubOutput(Difference[] results)
     {
         // https://docs.github.com/actions/reference/workflow-commands-for-github-actions#setting-an-output-parameter
         // ::set-output deprecated as mentioned in https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
         var githubOutputFile = Environment.GetEnvironmentVariable("GITHUB_OUTPUT", EnvironmentVariableTarget.Process);
+        var removalCount = results.Where(static x=> x.Kind is DifferenceKind.Removal).Count();
+        var additionCount = results.Where(static x => x.Kind is DifferenceKind.Addition).Count();
         if (!string.IsNullOrWhiteSpace(githubOutputFile))
         {
             using var textWriter = new StreamWriter(githubOutputFile!, true, Encoding.UTF8);
             await textWriter.WriteLineAsync("explanations<<EOF").ConfigureAwait(false);
-            await textWriter.WriteLineAsync(explanationResult).ConfigureAwait(false);
+            await textWriter.WriteLineAsync().ConfigureAwait(false); //empty line
+            await textWriter.WriteLineAsync("**This PR introduces the following changes to the Public API**").ConfigureAwait(false);
+            await textWriter.WriteLineAsync().ConfigureAwait(false); //empty line
+            await textWriter.WriteLineAsync("| Change Type| Count |").ConfigureAwait(false);
+            await textWriter.WriteLineAsync("|--------|--------|").ConfigureAwait(false);
+            await textWriter.WriteLineAsync($"| **Additions**| **{additionCount}** :white_check_mark:|").ConfigureAwait(false);
+            await textWriter.WriteLineAsync($"| **Removals**| **{removalCount}** {(removalCount > 0 ? ":x:" : ":white_check_mark:")}|").ConfigureAwait(false);
+            await textWriter.WriteLineAsync().ConfigureAwait(false);//end table
+            if (removalCount > 0)
+            {
+                await textWriter.WriteLineAsync(":bangbang: **IMPORTANT** :bangbang: Please confirm if the **{removalCount}** removals are expected by checking the action logs.").ConfigureAwait(false);
+            }
             await textWriter.WriteLineAsync("EOF").ConfigureAwait(false);
             await textWriter.WriteLineAsync("hasExplanations=true").ConfigureAwait(false);
         }
