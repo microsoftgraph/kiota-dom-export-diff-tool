@@ -81,8 +81,8 @@ internal class ExplainDiffHandler : ICommandHandler
         // https://docs.github.com/actions/reference/workflow-commands-for-github-actions#setting-an-output-parameter
         // ::set-output deprecated as mentioned in https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
         var githubOutputFile = Environment.GetEnvironmentVariable("GITHUB_OUTPUT", EnvironmentVariableTarget.Process);
-        var removalCount = results.Where(static x=> x.Kind is DifferenceKind.Removal).Count();
-        var additionCount = results.Where(static x => x.Kind is DifferenceKind.Addition).Count();
+        var removalCount = results.Count(static x=> x.Kind is DifferenceKind.Removal);
+        var additionCount = results.Count(static x => x.Kind is DifferenceKind.Addition);
         if (!string.IsNullOrWhiteSpace(githubOutputFile))
         {
             using var textWriter = new StreamWriter(githubOutputFile!, true, Encoding.UTF8);
