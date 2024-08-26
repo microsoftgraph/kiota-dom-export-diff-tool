@@ -53,4 +53,11 @@ jobs:
         with:
           name: patch
           path: '*.patch'
+      - name: Upload explanations file as artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        continue-on-error: true
+        with:
+          name: explanations
+          path: 'explanations.txt'
 ```

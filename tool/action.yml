@@ -24,6 +24,9 @@ outputs:
   hasExplanations:
     description:
       'Boolean to indicate if there are any explanations'
+  explanationsFilePath:
+    description:
+      'The path to the file containing the explanations of the differences between the two Kiota DOM exports.'
 runs:
   using: 'docker'
   image: 'Dockerfile'

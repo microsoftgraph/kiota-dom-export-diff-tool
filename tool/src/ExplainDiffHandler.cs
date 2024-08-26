@@ -66,7 +66,8 @@ internal class ExplainDiffHandler : ICommandHandler
             }
             var explanationResult = sb.ToString();
             Console.WriteLine(explanationResult);
-            await WriteToGitHubOutput(result).ConfigureAwait(false);
+            await WriteExplanationToFileAsync(explanationResult).ConfigureAwait(false);
+            await WriteSummaryToGitHubOutput(result).ConfigureAwait(false);
 
             if (Array.Exists(result, static x => x.Kind is DifferenceKind.Removal) && failOnRemovalValue)
             {
@@ -76,7 +77,13 @@ internal class ExplainDiffHandler : ICommandHandler
             return 0;
         }
     }
-    private static async Task WriteToGitHubOutput(Difference[] results)
+    private static async Task WriteExplanationToFileAsync(string explanationResult)
+    {
+        var directory = Directory.GetCurrentDirectory();
+        var explanationFilePath = System.IO.Path.Combine(directory, "explanations.txt");
+        await File.WriteAllTextAsync(explanationFilePath, explanationResult).ConfigureAwait(false);
+    }
+    private static async Task WriteSummaryToGitHubOutput(Difference[] results)
     {
         // https://docs.github.com/actions/reference/workflow-commands-for-github-actions#setting-an-output-parameter
         // ::set-output deprecated as mentioned in https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
