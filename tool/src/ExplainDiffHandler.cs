@@ -1,4 +1,4 @@
-﻿using System.CommandLine;
+using System.CommandLine;
 using System.CommandLine.Invocation;
 using System.Text;
 using Microsoft.Extensions.Logging;
@@ -82,6 +82,12 @@ internal class ExplainDiffHandler : ICommandHandler
         var directory = Directory.GetCurrentDirectory();
         var explanationFilePath = System.IO.Path.Combine(directory, "explanations.txt");
         await File.WriteAllTextAsync(explanationFilePath, explanationResult).ConfigureAwait(false);
+        var githubOutputFile = Environment.GetEnvironmentVariable("GITHUB_OUTPUT", EnvironmentVariableTarget.Process);
+        if (!string.IsNullOrWhiteSpace(githubOutputFile))
+        {
+            using var textWriter = new StreamWriter(githubOutputFile!, true, Encoding.UTF8);
+            await textWriter.WriteLineAsync($"explanationsFilePath={explanationFilePath}").ConfigureAwait(false);
+        }
     }
     private static async Task WriteSummaryToGitHubOutput(Difference[] results)
     {
