@@ -40,7 +40,7 @@ jobs:
           fail-on-removal: true
         id: diff
       - uses: microsoftgraph/kiota-dom-export-diff-tool/comment@main
-        if: ${{ always() && steps.generatePatch.outputs.patchFilePath != '' && steps.diff.outputs.explanations != '' && github.event_name == 'pull_request' }}
+        if: ${{ always() && steps.generatePatch.outputs.patchFilePath != '' && steps.diff.outputs.hasExplanations != '' && github.event_name == 'pull_request' }}
         continue-on-error: true
         with:
           comment: ${{ steps.diff.outputs.explanations }}
