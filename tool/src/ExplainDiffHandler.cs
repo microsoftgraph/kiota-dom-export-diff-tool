@@ -1,4 +1,4 @@
-﻿using System.CommandLine;
+using System.CommandLine;
 using System.CommandLine.Invocation;
 using System.Text;
 using Microsoft.Extensions.Logging;
@@ -59,6 +59,8 @@ internal class ExplainDiffHandler : ICommandHandler
                 diffValue = await File.ReadAllTextAsync(pathValue, cancellationToken).ConfigureAwait(false);
             }
             var result = diffExplanationService.ExplainDiff(diffValue);
+            var removalCount = result.Count(static x => x.Kind is DifferenceKind.Removal); // number of removals
+            var additionCount = result.Count(static x => x.Kind is DifferenceKind.Addition);// number of additions
             var sb = new StringBuilder();
             foreach (var diff in result)
             {
@@ -66,7 +68,8 @@ internal class ExplainDiffHandler : ICommandHandler
             }
             var explanationResult = sb.ToString();
             Console.WriteLine(explanationResult);
-            await WriteToGitHubOutput(result).ConfigureAwait(false);
+            var explanationFilePath = await WriteExplanationToFileAsync(explanationResult).ConfigureAwait(false);
+            await WriteSummaryToGitHubOutput(removalCount, additionCount, explanationFilePath).ConfigureAwait(false);
 
             if (Array.Exists(result, static x => x.Kind is DifferenceKind.Removal) && failOnRemovalValue)
             {
@@ -76,13 +79,18 @@ internal class ExplainDiffHandler : ICommandHandler
             return 0;
         }
     }
-    private static async Task WriteToGitHubOutput(Difference[] results)
+    private static async Task<string> WriteExplanationToFileAsync(string explanationResult)
+    {
+        var directory = Directory.GetCurrentDirectory();
+        var explanationFilePath = System.IO.Path.Combine(directory, "explanations.txt");
+        await File.WriteAllTextAsync(explanationFilePath, explanationResult).ConfigureAwait(false);
+        return explanationFilePath;
+    }
+    private static async Task WriteSummaryToGitHubOutput(int removalCount, int additionCount, string explanationFilePath)
     {
         // https://docs.github.com/actions/reference/workflow-commands-for-github-actions#setting-an-output-parameter
         // ::set-output deprecated as mentioned in https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
         var githubOutputFile = Environment.GetEnvironmentVariable("GITHUB_OUTPUT", EnvironmentVariableTarget.Process);
-        var removalCount = results.Count(static x=> x.Kind is DifferenceKind.Removal);
-        var additionCount = results.Count(static x => x.Kind is DifferenceKind.Addition);
         if (!string.IsNullOrWhiteSpace(githubOutputFile))
         {
             using var textWriter = new StreamWriter(githubOutputFile!, true, Encoding.UTF8);
@@ -101,6 +109,7 @@ internal class ExplainDiffHandler : ICommandHandler
             }
             await textWriter.WriteLineAsync("EOF").ConfigureAwait(false);
             await textWriter.WriteLineAsync("hasExplanations=true").ConfigureAwait(false);
+            await textWriter.WriteLineAsync($"explanationsFilePath={explanationFilePath}").ConfigureAwait(false);
         }
     }
     protected (ILoggerFactory, ILogger<T>) GetLoggerAndFactory<T>(InvocationContext context, string logFileRootPath = "")

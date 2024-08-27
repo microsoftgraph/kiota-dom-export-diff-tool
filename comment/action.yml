@@ -6,7 +6,7 @@ branding:
 inputs:
   comment:
     description:
-      'Comment to post'
+      'Comment to post. This can be comment text or a path to a file containing the comment text.'
     required: true
   prNumber:
     description:
