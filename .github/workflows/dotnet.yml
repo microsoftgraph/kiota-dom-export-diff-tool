@@ -14,7 +14,7 @@ defaults:
     working-directory: ./tool
 
 jobs:
-  build:
+  build-tool:
 
     runs-on: ubuntu-latest
 
